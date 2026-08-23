@@ -21,15 +21,57 @@ const services: ServiceCard[] = [
     href: '/servicios/ensayos-no-destructivos',
     title: 'Ensayos No Destructivos',
     description:
-      'Evaluación integral de materiales y componentes sin comprometer su integridad estructural, utilizando las técnicas más avanzadas del sector.',
+      'Servicios especializados de END orientados al control de calidad, evaluación de integridad y verificación de la conformidad de materiales, componentes y uniones soldadas.',
     icon: '🔬',
+  },
+  {
+    href: '/servicios/ultrasonido',
+    title: 'Ultrasonido (UT)',
+    description:
+      'Detección y evaluación de discontinuidades internas y superficiales en materiales y componentes mediante ultrasonido convencional.',
+    icon: '〰️',
+  },
+  {
+    href: '/servicios/radiografia-industrial',
+    title: 'Radiografía Industrial (RT)',
+    description:
+      'Evaluación de discontinuidades internas en uniones soldadas y componentes mediante radiación X y película radiográfica.',
+    icon: '☢️',
+  },
+  {
+    href: '/servicios/liquidos-penetrantes',
+    title: 'Líquidos Penetrantes (PT)',
+    description:
+      'Detección de discontinuidades abiertas a la superficie en materiales metálicos y no metálicos no porosos.',
+    icon: '💧',
+  },
+  {
+    href: '/servicios/particulas-magneticas',
+    title: 'Partículas Magnetizables (MT)',
+    description:
+      'Detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos.',
+    icon: '🧲',
   },
   {
     href: '/servicios/inspeccion-soldadura',
     title: 'Inspección de Soldadura',
     description:
-      'Verificación y control de calidad de uniones soldadas conforme a normas internacionales, garantizando la seguridad y durabilidad de las estructuras.',
+      'Control y seguimiento durante las distintas etapas del proceso de fabricación y montaje de uniones soldadas.',
     icon: '⚙️',
+  },
+  {
+    href: '/servicios/calificacion-soldadura',
+    title: 'Calificación de Soldadores y Procedimientos',
+    description:
+      'Calificación de soldadores, operadores de soldadura y procedimientos de soldadura (PQR/WPS) conforme a código aplicable.',
+    icon: '📋',
+  },
+  {
+    href: '/servicios/asesoramiento-tecnico',
+    title: 'Asesoramiento Técnico',
+    description:
+      'Asesoramiento especializado en END, inspección y soldadura. Selección de técnicas, interpretación normativa y evaluación de resultados.',
+    icon: '💡',
   },
   {
     href: '/servicios/inspeccion-recipientes-presion',
@@ -58,27 +100,6 @@ const services: ServiceCard[] = [
     description:
       'Captura tridimensional de alta precisión de instalaciones, equipos y estructuras para modelado BIM, control dimensional y documentación.',
     icon: '📡',
-  },
-  {
-    href: '/servicios/ultrasonido',
-    title: 'Ultrasonido',
-    description:
-      'Detección de discontinuidades internas y medición de espesores mediante técnicas de ultrasonido convencional, phased array y TOFD.',
-    icon: '〰️',
-  },
-  {
-    href: '/servicios/particulas-magneticas',
-    title: 'Partículas Magnéticas',
-    description:
-      'Identificación de defectos superficiales y subsuperficiales en materiales ferromagnéticos mediante el método de partículas magnéticas.',
-    icon: '🧲',
-  },
-  {
-    href: '/servicios/liquidos-penetrantes',
-    title: 'Líquidos Penetrantes',
-    description:
-      'Detección de discontinuidades abiertas a la superficie en materiales metálicos y no metálicos mediante ensayo con líquidos penetrantes.',
-    icon: '💧',
   },
   {
     href: '/servicios/inspeccion-tanques',

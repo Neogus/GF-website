@@ -1,28 +1,20 @@
 /**
- * Contact Form API Route
+ * Contact Form API Route (Resend — Cloudflare-compatible)
  *
- * SETUP INSTRUCTIONS:
- * -------------------
- * Option 1 - Gmail App Password (recommended for Gmail):
- *   1. Enable 2-Factor Authentication on your Google account
- *   2. Go to https://myaccount.google.com/apppasswords
- *   3. Generate an App Password for "Mail"
- *   4. Set SMTP_USER=your@gmail.com and SMTP_PASS=<16-char app password>
+ * SETUP:
+ * 1. Create account at https://resend.com
+ * 2. Generate API Key → set RESEND_API_KEY in environment
+ * 3. Verify your domain in Resend dashboard (or use onboarding@resend.dev for testing)
+ * 4. Set CONTACT_EMAIL as the destination inbox
  *
- * Option 2 - Generic SMTP (e.g. SendGrid, Mailgun, Brevo, etc.):
- *   Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS to your provider's values.
- *
- * Required environment variables (.env.local):
- *   SMTP_HOST     - SMTP server hostname  (default: smtp.gmail.com)
- *   SMTP_PORT     - SMTP port             (default: 587)
- *   SMTP_USER     - SMTP username / email
- *   SMTP_PASS     - SMTP password or App Password
- *   CONTACT_EMAIL - Destination inbox     (default: gabrielfranco2301@gmail.com)
- *   CONTACT_BCC   - Silent BCC recipient   (default: rabino.gustavo@gmail.com)
+ * Environment variables:
+ *   RESEND_API_KEY  - Resend API key (re_...)
+ *   RESEND_FROM     - Verified sender (e.g. "GF Web <info@gfinspecciones.com.ar>")
+ *   CONTACT_EMAIL   - Destination inbox
+ *   CONTACT_BCC     - Silent BCC recipient
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
 
 interface ContactFormData {
   nombre: string;
@@ -226,22 +218,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       );
     }
 
-    // ── SMTP transporter ────────────────────────────────────────────────────
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST ?? 'smtp.gmail.com',
-      port: Number(process.env.SMTP_PORT ?? 587),
-      secure: Number(process.env.SMTP_PORT ?? 587) === 465, // true only for port 465
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    // ── Build & send email ──────────────────────────────────────────────────
-    const subject = `Nuevo contacto desde web - ${nombre.trim()}${empresa ? ` - ${empresa.trim()}` : ''}`;
-    const destination = process.env.CONTACT_EMAIL ?? 'gabrielfranco2301@gmail.com';
-    const bcc = process.env.CONTACT_BCC ?? 'rabino.gustavo@gmail.com';
-
+    // ── Build email data ────────────────────────────────────────────────────
     const formData: ContactFormData = {
       nombre: nombre.trim(),
       email: email.trim(),
@@ -250,25 +227,65 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       mensaje: mensaje.trim(),
     };
 
-    await transporter.sendMail({
-      from: `"Formulario Web" <${process.env.SMTP_USER}>`,
-      to: destination,
-      bcc,
-      replyTo: formData.email,
-      subject,
-      html: buildHtmlBody(formData),
-      text: [
-        `Nombre:   ${formData.nombre}`,
-        `Email:    ${formData.email}`,
-        empresa  ? `Empresa:  ${formData.empresa}`   : null,
-        telefono ? `Teléfono: ${formData.telefono}`  : null,
-        '',
-        'Mensaje:',
-        formData.mensaje,
-      ]
-        .filter(Boolean)
-        .join('\n'),
+    const subject = `Nuevo contacto desde web - ${formData.nombre}${formData.empresa ? ` - ${formData.empresa}` : ''}`;
+    const destination = process.env.CONTACT_EMAIL ?? 'gabrielfranco2301@gmail.com';
+    const bcc = process.env.CONTACT_BCC ?? 'rabino.gustavo@gmail.com';
+    const from = process.env.RESEND_FROM ?? 'GF Web <onboarding@resend.dev>';
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      console.error('[contact/route] RESEND_API_KEY not configured');
+      return NextResponse.json(
+        { success: false, error: 'Email service not configured.' },
+        { status: 500 }
+      );
+    }
+
+    // ── Send via Resend API ─────────────────────────────────────────────────
+    const toAddresses = [destination];
+    const bccAddresses = bcc ? [bcc] : [];
+
+    const resendResponse = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from,
+        to: toAddresses,
+        bcc: bccAddresses,
+        reply_to: formData.email,
+        subject,
+        html: buildHtmlBody(formData),
+        text: [
+          `Nombre:   ${formData.nombre}`,
+          `Email:    ${formData.email}`,
+          formData.empresa ? `Empresa:  ${formData.empresa}` : null,
+          formData.telefono ? `Teléfono: ${formData.telefono}` : null,
+          '',
+          'Mensaje:',
+          formData.mensaje,
+        ]
+          .filter(Boolean)
+          .join('\n'),
+      }),
     });
+
+    if (!resendResponse.ok) {
+      const errorData = await resendResponse.json().catch(() => ({}));
+      console.error('[contact/route] Resend API error:', resendResponse.status, errorData);
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'No se pudo enviar el mensaje. Por favor, inténtalo de nuevo más tarde.',
+        },
+        { status: 500 }
+      );
+    }
+
+    const result = await resendResponse.json();
+    console.log('[contact/route] Email sent via Resend:', result);
 
     return NextResponse.json(
       { success: true, message: 'Mensaje enviado correctamente' },

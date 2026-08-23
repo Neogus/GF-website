@@ -10,24 +10,24 @@
   },
   "hero": {
     "eyebrow": "Professional Industrial Inspection",
-    "headline": "Leaders in Industrial Inspection & NDT in Argentina",
-    "subtitle": "GF Inspecciones y Ensayos provides cutting-edge non-destructive testing and industrial inspection services, ensuring the integrity, safety, and reliability of your critical assets.",
+    "headline": "Non-Destructive Testing & Welding Inspection in Argentina",
+    "subtitle": "GF Inspecciones y Ensayos provides specialized NDT and Welding Inspection services, with Level 2 personnel qualified per IRAM-ISO 9712. Quality, safety, and integrity in every project.",
     "cta": {
       "services": "Our Services",
       "contact": "Contact Us"
     },
     "scroll": "Scroll Down",
     "stats": {
-      "years": "Years",
-      "projects": "Projects",
-      "clients": "Clients",
+      "certification": "Certification",
+      "level": "Qualification",
+      "specialization": "Specialization",
       "commitment": "Commitment"
     }
   },
   "about": {
     "label": "About Us",
     "title": "About GF Inspecciones y Ensayos",
-    "description": "With over 10 years of experience in the industrial inspection sector, GF Inspecciones y Ensayos has established itself as a trusted partner for companies operating in the most demanding industries across Argentina. Our team of certified professionals holds internationally recognized qualifications and is committed to delivering results that meet the highest standards of quality and safety.",
+    "description": "GF Inspecciones y Ensayos is a company specialized in Non-Destructive Testing and Welding Inspection, based in Buenos Aires, Argentina. We have Level 2 personnel qualified and authorized per IRAM-ISO 9712 requirements, committed to the highest standards of quality and safety. Our focus is on delivering reliable, traceable, and timely results that support our clients' technical decisions.",
     "values": {
       "0": {
         "title": "Integrity",
@@ -35,45 +35,57 @@
       },
       "1": {
         "title": "Precision",
-        "description": "Accurate, reliable results are at the heart of what we do — because details make all the difference."
+        "description": "We apply rigorous procedures and techniques aligned with applicable standards to ensure reliable and reproducible results."
       },
       "2": {
-        "title": "Innovation",
-        "description": "We continuously adopt the latest technologies and methodologies to deliver superior inspection outcomes."
+        "title": "Quality",
+        "description": "Level 2 personnel qualified per IRAM-ISO 9712, ensuring technical competence in every service we provide."
       },
       "3": {
         "title": "Safety",
-        "description": "The safety of our team, our clients, and the public is non-negotiable and guides every decision."
+        "description": "The safety of people, facilities, and the environment is our priority in every job."
       }
     }
   },
   "services": {
     "title": "Our Services",
-    "subtitle": "We offer a comprehensive range of industrial inspection and non-destructive testing services tailored to meet the specific needs of each client and industry.",
+    "subtitle": "Specialized Non-Destructive Testing and Welding Inspection services, focused on quality control, integrity assessment, and conformity verification.",
     "items": {
       "ndt": {
         "title": "Non-Destructive Testing (NDT)",
-        "description": "Phased Array Ultrasonics (PAUT), industrial radiography (RT), eddy current testing (ET), and dye penetrant inspection (PT). We evaluate material integrity without affecting functionality."
+        "description": "Ultrasonic Testing (UT), Industrial Radiography (RT), Liquid Penetrant Testing (PT) and Magnetic Particle Testing (MT). We evaluate material integrity without affecting functionality."
+      },
+      "radiografia": {
+        "title": "Industrial Radiography (RT)",
+        "description": "Evaluation of internal discontinuities in welded joints and components using X-ray radiation and radiographic film."
       },
       "welding": {
         "title": "Welding Inspection",
-        "description": "Weld certification, procedure qualification (WPS/PQR), welder qualification per AWS, ASME and ISO standards, and quality control during fabrication and assembly."
+        "description": "Control and monitoring during the various stages of the fabrication and assembly process, with Level 2 personnel per IRAM-ISO 9712."
+      },
+      "calificacion": {
+        "title": "Welding Qualification",
+        "description": "Welder and welding operator qualification and welding procedure qualification (PQR/WPS) per applicable code or standard."
+      },
+      "asesoramiento": {
+        "title": "Technical Advisory",
+        "description": "Specialized advisory in NDT, inspection, and welding. Technique selection, standard interpretation, and results evaluation."
       },
       "pressure_vessel": {
         "title": "Pressure Vessel Inspection",
-        "description": "Inspection of pressure vessels, piping and process systems per ASME, API codes and Argentine regulations. Technical reports for certification and recertification."
+        "description": "Inspection of pressure vessels, piping, and process systems per ASME, API codes, and Argentine regulations."
       },
       "corrosion": {
         "title": "Corrosion Assessment",
-        "description": "Ultrasonic wall thickness measurement, corrosion mapping and degradation analysis. Remaining life estimation and mitigation strategies."
+        "description": "Ultrasonic wall thickness measurement, corrosion mapping, and degradation analysis. Remaining life estimation and mitigation strategies."
       },
       "asset_integrity": {
         "title": "Asset Integrity Management",
-        "description": "Risk-Based Inspection (RBI) plans, predictive maintenance and technical consulting. Quality assurance and regulatory compliance."
+        "description": "Risk-Based Inspection (RBI) plans, predictive maintenance, and technical consulting. Quality assurance and regulatory compliance."
       },
       "laser_scanning": {
         "title": "3D Laser Scanning",
-        "description": "High-precision dimensional surveys, BIM modeling, deformation analysis and reverse engineering for industrial plants."
+        "description": "High-precision dimensional surveys, BIM modeling, deformation analysis, and reverse engineering for industrial plants."
       }
     }
   },
@@ -85,25 +97,25 @@
       "petrochemical": {
         "title": "Petrochemical Plant Inspection",
         "location": "Buenos Aires, Argentina",
-        "description": "Comprehensive inspection program for pressure vessels, process piping and welds using Phased Array, radiography and thickness measurement.",
-        "tag": "NDT & Integrity"
+        "description": "Inspection of welded joints and components using Ultrasonic Testing, Industrial Radiography, and thickness measurement.",
+        "tag": "NDT & Welding"
       },
       "pipeline": {
-        "title": "Pipeline Integrity Program",
+        "title": "Welding Control in Assembly",
         "location": "Buenos Aires Province",
-        "description": "Risk-based integrity program for gas transmission pipelines. Periodic inspections, corrosion mapping and remaining life analysis.",
-        "tag": "Asset Integrity"
+        "description": "Welding inspection and NDT coordination during fabrication and assembly of metal structures.",
+        "tag": "Welding Inspection"
       },
       "refinery": {
-        "title": "Refinery Turnaround",
-        "location": "La Plata, Argentina",
-        "description": "Welding inspection, NDT on static equipment and 3D laser scanning for dimensional survey during planned shutdown.",
-        "tag": "Turnaround Services"
+        "title": "NDT on Industrial Equipment",
+        "location": "Buenos Aires, Argentina",
+        "description": "Inspection using UT, RT, PT, and MT on components and welded joints during planned shutdown.",
+        "tag": "NDT"
       }
     },
     "sectorsLabel": "Industries",
     "sectorsTitle": "Industries We Serve",
-    "sectorsSubtitle": "We provide specialized technical solutions to leading companies in the following sectors.",
+    "sectorsSubtitle": "We provide specialized technical solutions to companies in the following sectors.",
     "sectors": {
       "energy": "Energy",
       "construction": "Construction",
@@ -137,7 +149,7 @@
     }
   },
   "footer": {
-    "description": "GF Inspecciones y Ensayos is a leading provider of industrial inspection and non-destructive testing services in Argentina, committed to quality, safety, and technical excellence.",
+    "description": "GF Inspecciones y Ensayos is an Argentine company specialized in Non-Destructive Testing and Welding Inspection. Level 2 personnel qualified per IRAM-ISO 9712.",
     "quick_links_title": "Quick Links",
     "services_title": "Services",
     "copyright": "© {year} GF Inspecciones y Ensayos. All rights reserved."

@@ -10,24 +10,24 @@
   },
   "hero": {
     "eyebrow": "Inspección Industrial Profesional",
-    "headline": "Líderes en Inspección Industrial y Ensayos No Destructivos en Argentina",
-    "subtitle": "GF Inspecciones y Ensayos brinda soluciones de inspección de alta precisión para los sectores energético, industrial y de infraestructura crítica. Garantizamos calidad, seguridad e integridad en cada proyecto.",
+    "headline": "Ensayos No Destructivos e Inspección de Soldadura en Argentina",
+    "subtitle": "GF Inspecciones y Ensayos brinda servicios especializados de END e Inspección de Soldadura, con personal Nivel 2 calificado conforme IRAM-ISO 9712. Calidad, seguridad e integridad en cada proyecto.",
     "cta": {
       "services": "Nuestros Servicios",
       "contact": "Contáctenos"
     },
     "scroll": "Desplázate",
     "stats": {
-      "years": "Años",
-      "projects": "Proyectos",
-      "clients": "Clientes",
+      "certification": "Certificación",
+      "level": "Calificación",
+      "specialization": "Especialización",
       "commitment": "Compromiso"
     }
   },
   "about": {
     "label": "Quiénes Somos",
     "title": "Sobre GF Inspecciones y Ensayos",
-    "description": "Con más de 10 años de experiencia en el sector, GF Inspecciones y Ensayos es una empresa especializada en inspección industrial y ensayos no destructivos radicada en Buenos Aires, Argentina. Contamos con un equipo de profesionales certificados por organismos nacionales e internacionales, comprometidos con los más altos estándares de calidad y seguridad. Nuestro enfoque está puesto en brindar resultados confiables, trazables y oportunos que respalden las decisiones técnicas de nuestros clientes.",
+    "description": "GF Inspecciones y Ensayos es una empresa especializada en Ensayos No Destructivos e Inspección de Soldadura, radicada en Buenos Aires, Argentina. Contamos con personal Nivel 2 calificado y autorizado conforme a los requisitos de IRAM-ISO 9712, comprometido con los más altos estándares de calidad y seguridad. Nuestro enfoque está puesto en brindar resultados confiables, trazables y oportunos que respalden las decisiones técnicas de nuestros clientes.",
     "values": {
       "0": {
         "title": "Integridad",
@@ -35,37 +35,49 @@
       },
       "1": {
         "title": "Precisión",
-        "description": "Aplicamos métodos rigurosos y tecnología de vanguardia para asegurar resultados exactos y reproducibles."
+        "description": "Aplicamos procedimientos rigurosos y técnicas acordes a las normas aplicables para asegurar resultados confiables y reproducibles."
       },
       "2": {
-        "title": "Innovación",
-        "description": "Incorporamos continuamente nuevas técnicas y herramientas para ofrecer soluciones más eficientes."
+        "title": "Calidad",
+        "description": "Personal Nivel 2 calificado conforme IRAM-ISO 9712, asegurando la competencia técnica en cada servicio que brindamos."
       },
       "3": {
         "title": "Seguridad",
-        "description": "La seguridad de las personas, las instalaciones y el medio ambiente es nuestra prioridad."
+        "description": "La seguridad de las personas, las instalaciones y el medio ambiente es nuestra prioridad en cada trabajo."
       }
     }
   },
   "services": {
     "title": "Nuestros Servicios",
-    "subtitle": "Ofrecemos una amplia gama de servicios de inspección industrial y ensayos no destructivos adaptados a las necesidades de cada cliente y sector.",
+    "subtitle": "Servicios especializados de Ensayos No Destructivos e Inspección de Soldadura, orientados al control de calidad, evaluación de integridad y verificación de conformidad.",
     "items": {
       "ndt": {
         "title": "Ensayos No Destructivos (END)",
-        "description": "Ultrasonidos convencionales y Phased Array (PAUT), radiografía industrial (RT), corrientes inducidas (ET) y líquidos penetrantes (PT). Evaluamos la integridad de materiales sin afectar su funcionalidad."
+        "description": "Ultrasonido (UT), Radiografía Industrial (RT), Líquidos Penetrantes (PT) y Partículas Magnetizables (MT). Evaluamos la integridad de materiales sin afectar su funcionalidad."
+      },
+      "radiografia": {
+        "title": "Radiografía Industrial (RT)",
+        "description": "Evaluación de discontinuidades internas en uniones soldadas y componentes mediante radiación X y película radiográfica."
       },
       "welding": {
         "title": "Inspección de Soldadura",
-        "description": "Certificación de uniones soldadas, calificación de procedimientos (WPS/PQR), habilitación de soldadores según normas AWS, ASME e ISO, y control de calidad en fabricación y montaje."
+        "description": "Control y seguimiento durante las distintas etapas del proceso de fabricación y montaje, con personal Nivel 2 conforme IRAM-ISO 9712."
+      },
+      "calificacion": {
+        "title": "Calificación de Soldadura",
+        "description": "Calificación de soldadores, operadores de soldadura y procedimientos de soldadura (PQR/WPS) conforme a código o norma aplicable."
+      },
+      "asesoramiento": {
+        "title": "Asesoramiento Técnico",
+        "description": "Asesoramiento especializado en END, inspección y soldadura. Selección de técnicas, interpretación normativa y evaluación de resultados."
       },
       "pressure_vessel": {
         "title": "Recipientes a Presión",
-        "description": "Inspección de recipientes a presión, tuberías y sistemas de proceso según códigos ASME, API y normas argentinas. Informes técnicos para habilitación y recertificación."
+        "description": "Inspección de recipientes a presión, tuberías y sistemas de proceso según códigos ASME, API y normas argentinas."
       },
       "corrosion": {
         "title": "Evaluación de Corrosión",
-        "description": "Medición de espesores por ultrasonidos, mapeo de corrosión y análisis de degradación. Estimación de vida remanente y estrategias de mitigación."
+        "description": "Medición de espesores por ultrasonido, mapeo de corrosión y análisis de degradación. Estimación de vida remanente y estrategias de mitigación."
       },
       "asset_integrity": {
         "title": "Gestión de Integridad",
@@ -85,25 +97,25 @@
       "petrochemical": {
         "title": "Inspección en Planta Petroquímica",
         "location": "Buenos Aires, Argentina",
-        "description": "Programa integral de inspección de recipientes a presión, tuberías de proceso y soldaduras aplicando Phased Array, radiografía y medición de espesores.",
-        "tag": "END & Integridad"
+        "description": "Inspección de uniones soldadas y componentes mediante Ultrasonido, Radiografía Industrial y medición de espesores.",
+        "tag": "END & Soldadura"
       },
       "pipeline": {
-        "title": "Integridad de Gasoductos",
+        "title": "Control de Soldaduras en Montaje",
         "location": "Provincia de Buenos Aires",
-        "description": "Programa de integridad basado en riesgo para gasoductos de transporte. Inspecciones periódicas, mapeo de corrosión y análisis de vida remanente.",
-        "tag": "Integridad de Activos"
+        "description": "Inspección de soldadura y coordinación de END durante fabricación y montaje de estructuras metálicas.",
+        "tag": "Inspección de Soldadura"
       },
       "refinery": {
-        "title": "Parada de Planta en Refinería",
-        "location": "La Plata, Argentina",
-        "description": "Inspección de soldadura, END en equipos estáticos y escaneo láser 3D para relevamiento dimensional durante parada programada.",
-        "tag": "Parada de Planta"
+        "title": "Ensayos No Destructivos en Equipos",
+        "location": "Buenos Aires, Argentina",
+        "description": "Inspección mediante UT, RT, PT y MT en componentes y uniones soldadas durante parada programada.",
+        "tag": "END"
       }
     },
     "sectorsLabel": "Industrias",
     "sectorsTitle": "Sectores que Servimos",
-    "sectorsSubtitle": "Brindamos soluciones técnicas especializadas a empresas líderes en los siguientes sectores.",
+    "sectorsSubtitle": "Brindamos soluciones técnicas especializadas a empresas en los siguientes sectores.",
     "sectors": {
       "energy": "Energía",
       "construction": "Construcción",
@@ -137,7 +149,7 @@
     }
   },
   "footer": {
-    "description": "GF Inspecciones y Ensayos es una empresa argentina especializada en inspección industrial y ensayos no destructivos. Más de 10 años brindando soluciones técnicas confiables.",
+    "description": "GF Inspecciones y Ensayos es una empresa argentina especializada en Ensayos No Destructivos e Inspección de Soldadura. Personal Nivel 2 calificado conforme IRAM-ISO 9712.",
     "quick_links_title": "Enlaces Rápidos",
     "services_title": "Servicios",
     "copyright": "© {year} GF Inspecciones y Ensayos. Todos los derechos reservados."

@@ -2,31 +2,26 @@ import type { Metadata } from 'next';
 import ServicePage from '@/components/ServicePage';
 
 export const metadata: Metadata = {
-  title: 'Partículas Magnéticas (MT) | GF Inspecciones y Ensayos',
+  title: 'Partículas Magnetizables (MT) | GF Inspecciones y Ensayos',
   description:
-    'Ensayo por partículas magnéticas (MT) en Buenos Aires, Argentina. Detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos mediante técnicas de yugo, prods, bobina, partículas fluorescentes y visibles para soldaduras, fundiciones y componentes críticos.',
+    'Ensayos mediante Partículas Magnetizables para la detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos. Personal Nivel 2 calificado conforme IRAM-ISO 9712.',
   keywords: [
-    'partículas magnéticas',
+    'partículas magnetizables',
     'MT',
     'magnetic particle testing',
-    'ensayo por partículas magnéticas',
     'discontinuidades superficiales',
     'materiales ferromagnéticos',
-    'yugo magnético',
-    'prods',
-    'partículas fluorescentes',
+    'fisuras',
     'ensayos no destructivos',
     'NDT',
-    'inspección de soldadura MT',
-    'ASME V Art. 7',
-    'ASTM E709',
+    'IRAM-ISO 9712',
     'Buenos Aires',
     'Argentina',
   ],
   openGraph: {
-    title: 'Partículas Magnéticas (MT) | GF Inspecciones y Ensayos',
+    title: 'Partículas Magnetizables (MT) | GF Inspecciones y Ensayos',
     description:
-      'Ensayo por partículas magnéticas (MT) en Buenos Aires, Argentina. Detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos mediante técnicas de yugo, prods, bobina, partículas fluorescentes y visibles para soldaduras, fundiciones y componentes críticos.',
+      'Ensayos mediante Partículas Magnetizables para la detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos. Personal Nivel 2 calificado conforme IRAM-ISO 9712.',
     url: '/servicios/particulas-magneticas',
   },
 };
@@ -34,9 +29,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Ensayo por Partículas Magnéticas (MT)',
+  name: 'Ensayo por Partículas Magnetizables (MT)',
   description:
-    'Servicios profesionales de ensayo por partículas magnéticas (MT): detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos mediante técnicas de yugo, prods, bobina y conductor central, con partículas visibles (contraste de color) y fluorescentes bajo luz UV-A, aplicables a soldaduras, fundiciones, forjas, ejes y equipos de izaje.',
+    'Ensayos mediante Partículas Magnetizables para la detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos, permitiendo identificar fisuras, falta de continuidad, solapes y otras indicaciones.',
   provider: {
     '@type': 'Organization',
     name: 'GF Inspecciones y Ensayos',
@@ -54,13 +49,11 @@ const jsonLd = {
   serviceType: 'Magnetic Particle Testing (MT)',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Servicios de Partículas Magnéticas',
+    name: 'Servicios de Partículas Magnetizables',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'MT con Yugo Electromagnético (Yoke)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'MT con Prods (Corriente Directa)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'MT Fluorescente (FMT) bajo UV-A' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'MT con Partículas Visibles (Contraste de Color)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Desmagnetización Post-Ensayo' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ensayo por Partículas Magnetizables (MT)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspección de Soldaduras por MT' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspección de Componentes Ferromagnéticos' } },
     ],
   },
 };
@@ -94,35 +87,36 @@ const icon = (
   </svg>
 );
 
-const description = `El ensayo por partículas magnéticas (MT) es un método de ensayo no destructivo destinado a la detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos. El principio se basa en la magnetización del componente: cuando existe una discontinuidad (fisura, grieta, solape, pliegue, falta de fusión), el flujo magnético se dispersa y fuga hacia la superficie, atrayendo las partículas ferromagnéticas aplicadas y formando una indicación visible que revela la ubicación, orientación y extensión aproximada del defecto.
+const description = `Realizamos ensayos mediante Partículas Magnetizables para la detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos.
 
-En GF Inspecciones y Ensayos aplicamos diferentes técnicas de magnetización según la geometría de la pieza, el tipo de discontinuidad esperada y los requisitos normativos: yugo electromagnético (yoke) para soldaduras planas y acceso in situ; prods para componentes de gran sección con inyección de corriente directa; bobina (solenoide) para piezas cilíndricas y ejes; y conductor central para bridas, anillos y piezas tubulares. La combinación de al menos dos direcciones de magnetización perpendiculares garantiza la detección de indicaciones en cualquier orientación.
+La técnica permite identificar discontinuidades tales como fisuras, falta de continuidad, solapes y otras indicaciones orientadas favorablemente respecto del campo magnético aplicado.
 
-Ofrecemos técnica húmeda con partículas visibles (contraste de color blanco/rojo o negro) para inspecciones generales en campo, y técnica húmeda con partículas fluorescentes bajo luz UV-A (luz de Wood) para máxima sensibilidad en la detección de fisuras finas, poros de cadena y laminaciones en zonas de alta criticidad. La técnica en polvo seco es aplicable cuando la superficie está a temperatura elevada o en condiciones donde el vehículo líquido no es conveniente. Finalizamos cada inspección con la desmagnetización del componente cuando los requisitos operativos o normativos así lo exigen, verificando el nivel residual con gaussímetro. Emitimos informes técnicos con registro fotográfico, mapeo de indicaciones y dictamen de aceptación o rechazo conforme a los criterios de la norma aplicable.`;
+El ensayo comprende la preparación de la superficie, magnetización del componente, aplicación del medio indicador, interpretación de indicaciones y emisión del informe correspondiente.
+
+Nuestros ensayos son ejecutados por personal Nivel 2 calificado conforme a los requisitos de IRAM-ISO 9712, asegurando la aplicación de procedimientos, técnicas y criterios de aceptación acordes con las normas y especificaciones técnicas aplicables a cada proyecto.`;
 
 const features = [
-  'Detección de fisuras superficiales y subsuperficiales (hasta ~3–4 mm de profundidad) en aceros al carbono, aceros de baja aleación y fundiciones ferromagnéticas',
-  'Técnica húmeda con partículas visibles de contraste de color (blanco/rojo, negro/blanco) para inspección general en campo e instalaciones industriales',
-  'Técnica húmeda con partículas fluorescentes (FMT) bajo luz UV-A para máxima sensibilidad en detección de fisuras finas, poros de cadena y defectos de forja',
-  'Magnetización por yugo electromagnético (AC/DC) para soldaduras, piezas planas y accesos en altura, sin necesidad de contacto eléctrico directo con el componente',
-  'Magnetización por prods con corriente directa (HWDC/FWDC) para secciones gruesas, fundiciones y zonas de alta concentración de tensiones',
-  'Bobina y conductor central para magnetización longitudinal y circular de ejes, barras, tubos, bridas y piezas anulares',
-  'Desmagnetización post-ensayo con verificación de campo residual mediante gaussímetro, conforme a los límites establecidos por la norma o el cliente',
-  'Inspecciones in situ de soldaduras en recipientes a presión, estructuras, grúas, equipos de izaje, fundiciones y componentes de maquinaria en operación',
+  'Detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos',
+  'Identificación de fisuras, falta de continuidad, solapes y otras indicaciones',
+  'Preparación de la superficie del componente a inspeccionar',
+  'Magnetización del componente mediante técnica adecuada al tipo de pieza y discontinuidad buscada',
+  'Aplicación del medio indicador (partículas magnetizables)',
+  'Interpretación de indicaciones y evaluación conforme a criterios de aceptación aplicables',
+  'Emisión de informe técnico con registro de indicaciones y dictamen correspondiente',
+  'Personal Nivel 2 calificado conforme IRAM-ISO 9712',
 ];
 
-const standards = ['ASME V Art. 7', 'ASTM E709', 'ISO 9934', 'EN ISO 17638'];
+const standards = ['IRAM-ISO 9712', 'ASME V Art. 7', 'ASTM E709', 'ISO 9934'];
 
 const relatedServices = [
   { name: 'Ensayos No Destructivos', href: '/servicios/ensayos-no-destructivos' },
   { name: 'Líquidos Penetrantes', href: '/servicios/liquidos-penetrantes' },
   { name: 'Ultrasonido', href: '/servicios/ultrasonido' },
   { name: 'Inspección de Soldadura', href: '/servicios/inspeccion-soldadura' },
-  { name: 'Inspección de Recipientes a Presión', href: '/servicios/inspeccion-recipientes-presion' },
-  { name: 'Evaluación de Corrosión', href: '/servicios/evaluacion-corrosion' },
+  { name: 'Radiografía Industrial', href: '/servicios/radiografia-industrial' },
 ];
 
-export default function ParticulasMagneticasPage() {
+export default function ParticulasMagnetizablesPage() {
   return (
     <>
       <script
@@ -130,7 +124,7 @@ export default function ParticulasMagneticasPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ServicePage
-        title="Ensayo por Partículas Magnéticas (MT)"
+        title="Partículas Magnetizables (MT)"
         subtitle="Detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos"
         description={description}
         features={features}

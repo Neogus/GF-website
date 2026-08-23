@@ -8,13 +8,19 @@ import {
   FaFlask,
   FaClipboardCheck,
   FaCube,
+  FaRadiation,
+  FaCertificate,
+  FaLightbulb,
 } from 'react-icons/fa';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { IconType } from 'react-icons';
 
 const services: { key: string; icon: IconType; href: string }[] = [
   { key: 'ndt', icon: FaSearchPlus, href: '/servicios/ensayos-no-destructivos' },
+  { key: 'radiografia', icon: FaRadiation, href: '/servicios/radiografia-industrial' },
   { key: 'welding', icon: FaFire, href: '/servicios/inspeccion-soldadura' },
+  { key: 'calificacion', icon: FaCertificate, href: '/servicios/calificacion-soldadura' },
+  { key: 'asesoramiento', icon: FaLightbulb, href: '/servicios/asesoramiento-tecnico' },
   { key: 'pressure_vessel', icon: FaIndustry, href: '/servicios/inspeccion-recipientes-presion' },
   { key: 'corrosion', icon: FaFlask, href: '/servicios/evaluacion-corrosion' },
   { key: 'asset_integrity', icon: FaClipboardCheck, href: '/servicios/gestion-integridad-activos' },

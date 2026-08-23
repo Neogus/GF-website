@@ -3,10 +3,10 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const stats = [
-  { value: '10+',  labelKey: 'hero.stats.years',      fallback: 'Años' },
-  { value: '500+', labelKey: 'hero.stats.projects',   fallback: 'Proyectos' },
-  { value: '50+',  labelKey: 'hero.stats.clients',    fallback: 'Clientes' },
-  { value: '100%', labelKey: 'hero.stats.commitment', fallback: 'Compromiso' },
+  { value: 'IRAM-ISO 9712', labelKey: 'hero.stats.certification', fallback: 'Certificación' },
+  { value: 'Nivel 2',       labelKey: 'hero.stats.level',          fallback: 'Calificación' },
+  { value: 'END & Soldadura', labelKey: 'hero.stats.specialization', fallback: 'Especialización' },
+  { value: '100%',          labelKey: 'hero.stats.commitment',     fallback: 'Compromiso' },
 ];
 
 export default function Hero() {

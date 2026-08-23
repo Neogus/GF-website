@@ -2,25 +2,25 @@ import type { Metadata } from 'next';
 import ServicePage from '@/components/ServicePage';
 
 export const metadata: Metadata = {
-  title: 'Ensayos No Destructivos (END/NDT) | GF Inspecciones y Ensayos',
+  title: 'Ensayos No Destructivos (END) | GF Inspecciones y Ensayos',
   description:
-    'Servicios de ensayos no destructivos en Buenos Aires, Argentina. Ultrasonido Phased Array, radiografía industrial, corrientes inducidas, líquidos penetrantes y partículas magnéticas.',
+    'Servicios especializados de Ensayos No Destructivos: Ultrasonido, Radiografía Industrial, Líquidos Penetrantes y Partículas Magnetizables. Personal Nivel 2 calificado conforme IRAM-ISO 9712.',
   keywords: [
     'ensayos no destructivos',
     'NDT',
     'END',
-    'ultrasonido phased array',
+    'ultrasonido',
     'radiografía industrial',
-    'corrientes inducidas',
     'líquidos penetrantes',
-    'partículas magnéticas',
+    'partículas magnetizables',
+    'IRAM-ISO 9712',
     'Buenos Aires',
     'Argentina',
   ],
   openGraph: {
-    title: 'Ensayos No Destructivos (END/NDT) | GF Inspecciones y Ensayos',
+    title: 'Ensayos No Destructivos (END) | GF Inspecciones y Ensayos',
     description:
-      'Servicios de ensayos no destructivos en Buenos Aires, Argentina. Ultrasonido Phased Array, radiografía industrial, corrientes inducidas, líquidos penetrantes y partículas magnéticas.',
+      'Servicios especializados de Ensayos No Destructivos: Ultrasonido, Radiografía Industrial, Líquidos Penetrantes y Partículas Magnetizables. Personal Nivel 2 calificado conforme IRAM-ISO 9712.',
     url: '/servicios/ensayos-no-destructivos',
   },
 };
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Ensayos No Destructivos (END/NDT)',
+  name: 'Ensayos No Destructivos (END)',
   description:
-    'Servicios profesionales de ensayos no destructivos: Ultrasonido Phased Array (PAUT), radiografía industrial (RT), corrientes inducidas (ET), líquidos penetrantes (PT) y partículas magnéticas (MT).',
+    'Servicios especializados de Ensayos No Destructivos orientados al control de calidad, evaluación de integridad y verificación de la conformidad de materiales, componentes, uniones soldadas y estructuras.',
   provider: {
     '@type': 'Organization',
     name: 'GF Inspecciones y Ensayos',
@@ -50,11 +50,10 @@ const jsonLd = {
     '@type': 'OfferCatalog',
     name: 'Técnicas de Ensayos No Destructivos',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ultrasonido Phased Array (PAUT)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ultrasonido (UT)' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Radiografía Industrial (RT)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corrientes Inducidas (ET)' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Líquidos Penetrantes (PT)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Partículas Magnéticas (MT)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Partículas Magnetizables (MT)' } },
     ],
   },
 };
@@ -80,31 +79,31 @@ const icon = (
   </svg>
 );
 
-const description = `Los ensayos no destructivos (END/NDT) permiten evaluar la integridad de materiales, soldaduras y componentes industriales sin afectar su funcionalidad ni su vida útil. En GF Inspecciones y Ensayos aplicamos las técnicas más avanzadas del sector para garantizar la seguridad y confiabilidad de sus instalaciones.
+const description = `En GF Inspecciones y Ensayos brindamos servicios especializados de Ensayos No Destructivos (END), orientados al control de calidad, evaluación de integridad y verificación de la conformidad de materiales, componentes, uniones soldadas y estructuras.
 
-Contamos con personal certificado bajo normas internacionales (ISO 9712, ASNT SNT-TC-1A) en múltiples disciplinas NDT. Nuestros técnicos poseen niveles II y III en las principales técnicas, asegurando resultados precisos, documentados y trazables para auditorías y certificaciones de calidad.
+Nuestros servicios son ejecutados por personal Nivel 2 (Level II) calificado y autorizado conforme a los requisitos de IRAM-ISO 9712, asegurando la aplicación de procedimientos, técnicas y criterios de aceptación acordes con las normas y especificaciones técnicas aplicables a cada proyecto.
 
-Desde la detección de fisuras en soldaduras mediante Ultrasonido Phased Array (PAUT) hasta la verificación de espesores por corrosión con técnicas ultrasónicas convencionales, nuestros servicios cubren toda la cadena de valor del control de calidad industrial: petroquímica, energía, construcción, transporte y manufactura.`;
+Las técnicas que ofrecemos incluyen Ultrasonido (UT), Radiografía Industrial (RT), Líquidos Penetrantes (PT) y Partículas Magnetizables (MT), cada una seleccionada según los requerimientos específicos del componente a inspeccionar y los criterios normativos aplicables.`;
 
 const features = [
-  'Ultrasonido Phased Array (PAUT) con generación de imágenes S-scan y E-scan para mapeo volumétrico de defectos',
-  'Radiografía industrial (RT) con equipos de rayos X portátiles e iridiación con Ir-192 para soldaduras y piezas fundidas',
-  'Corrientes inducidas (ET) para detección de discontinuidades superficiales y subsuperficiales en materiales conductores',
-  'Líquidos penetrantes (PT) visibles y fluorescentes para detección de discontinuidades abiertas a la superficie',
-  'Partículas magnéticas (MT) con equipos portátiles de yugo y en cabina para materiales ferromagnéticos',
-  'Medición de espesores por ultrasonido (UT) para monitoreo de corrosión en recipientes a presión y cañerías',
-  'Emisión acústica (AE) para monitoreo en tiempo real de estructuras y recipientes a presión bajo carga',
-  'Informes técnicos digitalizados con imágenes, coordenadas de indicaciones y recomendaciones de reparación',
+  'Ultrasonido Convencional (UT) — detección de discontinuidades internas y superficiales',
+  'Radiografía Industrial (RT) — evaluación de la estructura interna de componentes y soldaduras',
+  'Líquidos Penetrantes (PT) — detección de discontinuidades abiertas a la superficie',
+  'Partículas Magnetizables (MT) — detección de discontinuidades superficiales y subsuperficiales en materiales ferromagnéticos',
+  'Personal Nivel 2 calificado conforme IRAM-ISO 9712',
+  'Procedimientos y criterios de aceptación acordes con normas y especificaciones técnicas aplicables',
+  'Informes técnicos con evaluación de indicaciones y dictamen correspondiente',
+  'Aplicable a materiales, componentes, uniones soldadas y estructuras',
 ];
 
-const standards = ['ASME V', 'API 650', 'AWS D1.1', 'ISO 9712', 'EN 12062'];
+const standards = ['IRAM-ISO 9712', 'ASME V', 'AWS D1.1', 'API 1104', 'ISO 17636'];
 
 const relatedServices = [
-  { name: 'Inspección de Soldaduras', href: '/servicios/inspeccion-soldaduras' },
-  { name: 'Inspección de Recipientes a Presión', href: '/servicios/recipientes-presion' },
-  { name: 'Control de Calidad Industrial', href: '/servicios/control-calidad' },
-  { name: 'Certificación de Materiales', href: '/servicios/certificacion-materiales' },
-  { name: 'Inspección de Tuberías', href: '/servicios/tuberias' },
+  { name: 'Ultrasonido', href: '/servicios/ultrasonido' },
+  { name: 'Radiografía Industrial', href: '/servicios/radiografia-industrial' },
+  { name: 'Líquidos Penetrantes', href: '/servicios/liquidos-penetrantes' },
+  { name: 'Partículas Magnetizables', href: '/servicios/particulas-magneticas' },
+  { name: 'Inspección de Soldadura', href: '/servicios/inspeccion-soldadura' },
 ];
 
 export default function EnsayosNoDestructivosPage() {
@@ -115,8 +114,8 @@ export default function EnsayosNoDestructivosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ServicePage
-        title="Ensayos No Destructivos (END/NDT)"
-        subtitle="Técnicas avanzadas para la detección de defectos sin dañar materiales"
+        title="Ensayos No Destructivos (END)"
+        subtitle="Control de calidad y evaluación de integridad sin comprometer la funcionalidad de los componentes"
         description={description}
         features={features}
         standards={standards}

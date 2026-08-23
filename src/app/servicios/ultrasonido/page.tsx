@@ -2,28 +2,27 @@ import type { Metadata } from 'next';
 import ServicePage from '@/components/ServicePage';
 
 export const metadata: Metadata = {
-  title: 'Ultrasonido Industrial | GF Inspecciones y Ensayos',
+  title: 'Ultrasonido (UT) | GF Inspecciones y Ensayos',
   description:
-    'Ensayos ultrasónicos industriales en Buenos Aires, Argentina. Ultrasonido convencional, Phased Array (PAUT), TOFD, medición de espesores y mapeo de corrosión para soldaduras, recipientes a presión y estructuras metálicas.',
+    'Ensayos mediante Ultrasonido Convencional para la detección y evaluación de discontinuidades internas y superficiales en materiales y componentes. Personal Nivel 2 calificado conforme IRAM-ISO 9712.',
   keywords: [
-    'ultrasonido industrial',
+    'ultrasonido convencional',
     'ultrasonido',
-    'phased array',
-    'PAUT',
-    'TOFD',
-    'medición de espesores',
+    'UT',
     'ensayo ultrasónico',
-    'mapeo de corrosión',
-    'UT convencional',
-    'inspección de soldadura ultrasonido',
-    'NDT ultrasonido',
+    'discontinuidades internas',
+    'inspección de soldaduras',
+    'medición de espesores',
+    'ensayos no destructivos',
+    'NDT',
+    'IRAM-ISO 9712',
     'Buenos Aires',
     'Argentina',
   ],
   openGraph: {
-    title: 'Ultrasonido Industrial | GF Inspecciones y Ensayos',
+    title: 'Ultrasonido (UT) | GF Inspecciones y Ensayos',
     description:
-      'Ensayos ultrasónicos industriales en Buenos Aires, Argentina. Ultrasonido convencional, Phased Array (PAUT), TOFD, medición de espesores y mapeo de corrosión para soldaduras, recipientes a presión y estructuras metálicas.',
+      'Ensayos mediante Ultrasonido Convencional para la detección y evaluación de discontinuidades internas y superficiales en materiales y componentes. Personal Nivel 2 calificado conforme IRAM-ISO 9712.',
     url: '/servicios/ultrasonido',
   },
 };
@@ -31,9 +30,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Ultrasonido Industrial',
+  name: 'Ultrasonido Convencional (UT)',
   description:
-    'Servicios profesionales de ensayos ultrasónicos: ultrasonido convencional (UT), Phased Array (PAUT), Time of Flight Diffraction (TOFD), medición de espesores, mapeo de corrosión y escaneo automatizado para la detección y caracterización de defectos en componentes metálicos y compuestos.',
+    'Ensayos mediante Ultrasonido Convencional destinados a la detección y evaluación de discontinuidades internas y superficiales en materiales y componentes, mediante la propagación de ondas ultrasónicas y el análisis de las indicaciones obtenidas.',
   provider: {
     '@type': 'Organization',
     name: 'GF Inspecciones y Ensayos',
@@ -48,16 +47,14 @@ const jsonLd = {
     '@type': 'Country',
     name: 'Argentina',
   },
-  serviceType: 'Ultrasonic Testing (UT / PAUT / TOFD)',
+  serviceType: 'Ultrasonic Testing (UT)',
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Servicios de Ultrasonido Industrial',
+    name: 'Servicios de Ultrasonido',
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ultrasonido Convencional (UT)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Phased Array (PAUT)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Time of Flight Diffraction (TOFD)' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Medición de Espesores por Ultrasonido' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mapeo de Corrosión (C-Scan)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspección de Soldaduras por UT' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Medición de Espesores' } },
     ],
   },
 };
@@ -86,32 +83,33 @@ const icon = (
   </svg>
 );
 
-const description = `El ultrasonido industrial es uno de los métodos de ensayo no destructivo más versátiles y confiables para la detección, localización y caracterización de discontinuidades internas en materiales metálicos y compuestos. En GF Inspecciones y Ensayos aplicamos técnicas ultrasónicas avanzadas —ultrasonido convencional (UT), Phased Array (PAUT) y Time of Flight Diffraction (TOFD)— adaptadas a cada aplicación y tipo de componente.
+const description = `Realizamos ensayos mediante Ultrasonido Convencional, destinados a la detección y evaluación de discontinuidades internas y superficiales en materiales y componentes.
 
-El ultrasonido convencional permite la inspección de soldaduras, piezas forjadas, fundiciones y laminados mediante haces pulsados de alta frecuencia. El Phased Array (PAUT) amplía las capacidades del UT convencional al manejar múltiples elementos piezoeléctricos de forma independiente, generando barridos electrónicos, sectoriales y lineales que permiten obtener imágenes B-scan, C-scan y S-scan en tiempo real con mayor cobertura y productividad. El TOFD aprovecha las señales difractadas en los extremos de los defectos para caracterizar con alta precisión su profundidad y extensión, siendo especialmente valioso en la inspección de recipientes a presión y tuberías críticas.
+La técnica permite inspeccionar soldaduras, piezas metálicas, componentes forjados y otros elementos, mediante la propagación de ondas ultrasónicas y el análisis de las indicaciones obtenidas.
 
-Complementamos estos servicios con medición de espesores por ultrasonido (incluso a través de recubrimientos), mapeo de corrosión mediante escaneo automatizado y la inspección de materiales compuestos. Emitimos informes técnicos con imágenes digitales, vistas sectoriales y datos de tamaño, posición y orientación de cada indicación, brindando la trazabilidad documental requerida por las normas ASME, API, ISO y EN.`;
+El servicio comprende la preparación de la superficie, selección de palpadores y parámetros de inspección, ejecución del ensayo, evaluación de indicaciones y elaboración del informe técnico correspondiente.
+
+Nuestros ensayos son ejecutados por personal Nivel 2 calificado conforme a los requisitos de IRAM-ISO 9712, asegurando la aplicación de procedimientos, técnicas y criterios de aceptación acordes con las normas y especificaciones técnicas aplicables a cada proyecto.`;
 
 const features = [
-  'Ultrasonido convencional (UT) con técnicas de haz recto, angular y de inmersión para detección de laminaciones, inclusiones, fisuras y falta de fusión en soldaduras y componentes base',
-  'Phased Array (PAUT) con barrido sectorial (S-scan) y lineal para inspección volumétrica de soldaduras, nozzles, bridas y geometrías complejas con visualización en tiempo real',
-  'Time of Flight Diffraction (TOFD) para caracterización precisa de la altura y posición de defectos planares en uniones soldadas de recipientes a presión y tuberías de alta criticidad',
-  'Medición de espesores por ultrasonido: paredes de cañerías, cascos de recipientes, estructuras y componentes con acceso unilateral, incluyendo medición a través de recubrimientos',
-  'Mapeo de corrosión (C-scan) mediante escaneo automatizado o semiautomático con representación bidimensional del perfil de espesores residuales',
-  'Inspección de soldaduras en uniones a tope, en ángulo y de penetración parcial conforme a procedimientos calificados según ASME V, EN 17640 y AWS D1.1',
-  'Inspección de materiales compuestos (FRP/GRP) para detección de delaminaciones, zonas húmedas y despegues en estructuras de fibra de vidrio y carbono',
-  'Escaneo automatizado y semiautomático (AUT/SAUT) para grandes volúmenes de inspección con trazabilidad completa de posición y datos de amplitud',
+  'Detección y evaluación de discontinuidades internas y superficiales en materiales metálicos',
+  'Inspección de soldaduras mediante haz angular para detección de falta de fusión, falta de penetración, porosidad e inclusiones',
+  'Inspección de piezas forjadas, fundiciones y laminados mediante haz recto y angular',
+  'Medición de espesores en componentes con acceso unilateral',
+  'Preparación de la superficie y selección de palpadores adecuados para cada aplicación',
+  'Evaluación de indicaciones conforme a los criterios de aceptación de la norma aplicable',
+  'Elaboración de informes técnicos con registro de indicaciones, dimensionamiento y localización',
+  'Personal Nivel 2 calificado conforme IRAM-ISO 9712',
 ];
 
-const standards = ['ASME V', 'EN 17640', 'API 570', 'ISO 16811', 'AWS D1.1'];
+const standards = ['IRAM-ISO 9712', 'ASME V', 'AWS D1.1', 'API 1104'];
 
 const relatedServices = [
   { name: 'Ensayos No Destructivos', href: '/servicios/ensayos-no-destructivos' },
+  { name: 'Radiografía Industrial', href: '/servicios/radiografia-industrial' },
   { name: 'Inspección de Soldadura', href: '/servicios/inspeccion-soldadura' },
-  { name: 'Inspección de Recipientes a Presión', href: '/servicios/inspeccion-recipientes-presion' },
-  { name: 'Evaluación de Corrosión', href: '/servicios/evaluacion-corrosion' },
   { name: 'Líquidos Penetrantes', href: '/servicios/liquidos-penetrantes' },
-  { name: 'Partículas Magnéticas', href: '/servicios/particulas-magneticas' },
+  { name: 'Partículas Magnetizables', href: '/servicios/particulas-magneticas' },
 ];
 
 export default function UltrasonidoPage() {
@@ -122,8 +120,8 @@ export default function UltrasonidoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ServicePage
-        title="Ultrasonido Industrial"
-        subtitle="Detección y caracterización de defectos mediante ondas ultrasónicas"
+        title="Ultrasonido (UT)"
+        subtitle="Detección y evaluación de discontinuidades mediante ondas ultrasónicas"
         description={description}
         features={features}
         standards={standards}

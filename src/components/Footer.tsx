@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaLinkedin } from 'react-icons/fa';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 export default function Footer() {
@@ -21,11 +21,11 @@ export default function Footer() {
 
   const serviceLinks = [
     { label: t('services.items.ndt.title'), href: '/servicios/ensayos-no-destructivos' },
+    { label: t('services.items.radiografia.title'), href: '/servicios/radiografia-industrial' },
     { label: t('services.items.welding.title'), href: '/servicios/inspeccion-soldadura' },
+    { label: t('services.items.calificacion.title'), href: '/servicios/calificacion-soldadura' },
+    { label: t('services.items.asesoramiento.title'), href: '/servicios/asesoramiento-tecnico' },
     { label: t('services.items.pressure_vessel.title'), href: '/servicios/inspeccion-recipientes-presion' },
-    { label: t('services.items.corrosion.title'), href: '/servicios/evaluacion-corrosion' },
-    { label: t('services.items.asset_integrity.title'), href: '/servicios/gestion-integridad-activos' },
-    { label: t('services.items.laser_scanning.title'), href: '/servicios/escaneo-laser-3d' },
   ];
 
   return (
@@ -124,15 +124,6 @@ export default function Footer() {
                   className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   +54 9 11 6152-8650
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaEnvelope className="text-blue-400 flex-shrink-0 text-sm" />
-                <a
-                  href="mailto:gabrielfranco2301@gmail.com"
-                  className="text-sm text-gray-400 hover:text-white transition-colors duration-200 break-all"
-                >
-                  gabrielfranco2301@gmail.com
                 </a>
               </li>
             </ul>

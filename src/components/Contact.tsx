@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa'
+import { FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 import { useLanguage } from '@/i18n/LanguageContext'
 
 export default function Contact() {
@@ -60,7 +60,7 @@ export default function Contact() {
             style={{ backgroundColor: '#162240' }}
             className="flex flex-col justify-center p-10 text-white"
           >
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-3xl font-bold mb-4" style={{ color: '#d1d5db' }}>
               {t('contact.title')}
             </h2>
             <p className="text-gray-300 mb-10 leading-relaxed">
@@ -104,23 +104,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Email */}
-              <div className="flex items-start gap-4">
-                <div
-                  style={{ backgroundColor: '#D4A853' }}
-                  className="mt-1 p-2 rounded-full flex-shrink-0"
-                >
-                  <FaEnvelope className="text-white text-sm" />
-                </div>
-                <div>
-                  <p className="font-semibold text-white">
-                    Email
-                  </p>
-                  <p className="text-gray-300 text-sm mt-0.5">
-                    {t('contact.email')}
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 
