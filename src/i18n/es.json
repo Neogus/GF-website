@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "language": "EN"
+  },
+  "hero": {
+    "headline": "Líderes en Inspección Industrial y Ensayos No Destructivos en Argentina",
+    "subtitle": "GF Inspecciones y Ensayos brinda soluciones de inspección de alta precisión para los sectores energético, industrial y de infraestructura crítica. Garantizamos calidad, seguridad e integridad en cada proyecto.",
+    "cta_primary": "Solicitar Consulta",
+    "cta_secondary": "Conocer Nuestros Servicios"
+  },
+  "about": {
+    "title": "Quiénes Somos",
+    "description": "Con más de 10 años de experiencia en el sector, GF Inspecciones y Ensayos es una empresa especializada en inspección industrial y ensayos no destructivos radicada en Buenos Aires, Argentina. Contamos con un equipo de profesionales certificados por organismos nacionales e internacionales, comprometidos con los más altos estándares de calidad y seguridad. Nuestro enfoque está puesto en brindar resultados confiables, trazables y oportunos que respalden las decisiones técnicas de nuestros clientes.",
+    "experience_label": "Años de Experiencia",
+    "experience_value": "10+",
+    "projects_label": "Proyectos Realizados",
+    "projects_value": "500+",
+    "clients_label": "Clientes Satisfechos",
+    "clients_value": "80+",
+    "values_title": "Nuestros Valores",
+    "values": {
+      "integrity": {
+        "title": "Integridad",
+        "description": "Actuamos con honestidad y transparencia en cada servicio, generando confianza duradera con nuestros clientes y socios."
+      },
+      "precision": {
+        "title": "Precisión",
+        "description": "Aplicamos métodos rigurosos y tecnología de vanguardia para asegurar resultados exactos y reproducibles en cada ensayo."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Incorporamos continuamente nuevas técnicas y herramientas que nos permiten ofrecer soluciones más eficientes y avanzadas."
+      },
+      "safety": {
+        "title": "Seguridad",
+        "description": "La seguridad de las personas, las instalaciones y el medio ambiente es nuestra prioridad en cada intervención técnica."
+      }
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Ofrecemos una amplia gama de servicios de inspección industrial y ensayos no destructivos adaptados a las necesidades de cada cliente y sector.",
+    "items": {
+      "ndt": {
+        "title": "Ensayos No Destructivos (END/NDT)",
+        "description": "Realizamos ensayos no destructivos con las técnicas más avanzadas del mercado: ultrasonidos convencionales y Phased Array (PAUT), radiografía industrial (RT), corrientes inducidas (ET) y líquidos penetrantes (PT). Evaluamos la integridad de materiales y componentes sin afectar su funcionalidad ni su vida útil."
+      },
+      "welding": {
+        "title": "Inspección de Soldadura",
+        "description": "Brindamos servicios integrales de inspección y supervisión de soldadura: certificación de uniones soldadas, calificación de procedimientos de soldadura (WPS/PQR), habilitación de soldadores según normas AWS, ASME y ISO, y control de calidad durante fabricación y montaje."
+      },
+      "pressure_vessels": {
+        "title": "Inspección de Recipientes a Presión",
+        "description": "Inspeccionamos recipientes a presión, tuberías y sistemas de proceso según los códigos ASME, API y normas argentinas aplicables. Evaluamos el estado de conservación, detectamos deterioros y emitimos informes técnicos para habilitación o recertificación ante organismos de control."
+      },
+      "corrosion": {
+        "title": "Evaluación de Corrosión",
+        "description": "Realizamos medición de espesores por ultrasonidos, mapeo de corrosión y análisis de degradación en equipos e instalaciones industriales. Estimamos la vida remanente de los activos y proponemos estrategias de mitigación y monitoreo para extender su vida operativa de forma segura."
+      },
+      "integrity": {
+        "title": "Gestión de Integridad de Activos",
+        "description": "Desarrollamos planes de inspección basados en riesgo (RBI), programas de mantenimiento predictivo y consultoría técnica en integridad de activos. Acompañamos a nuestros clientes en el aseguramiento de la calidad de sus operaciones, asegurando el cumplimiento normativo y la continuidad operacional."
+      },
+      "laser_scanning": {
+        "title": "Escaneo Láser 3D",
+        "description": "Utilizamos tecnología de escaneo láser 3D de alta precisión para relevamientos dimensionales, modelado de instalaciones (BIM/punto de nube), análisis de deformaciones y proyectos de ingeniería inversa. Ideal para plantas industriales, estructuras complejas y relevamientos en condiciones difíciles."
+      }
+    }
+  },
+  "projects": {
+    "label": "Proyectos",
+    "title": "Proyectos Destacados",
+    "subtitle": "Conocé algunos de los proyectos en los que hemos aplicado nuestra experiencia para garantizar la integridad y seguridad de instalaciones industriales en Argentina y la región.",
+    "items": {
+      "petrochemical": {
+        "title": "Inspección en Planta Petroquímica",
+        "location": "Buenos Aires, Argentina",
+        "description": "Programa integral de inspección de recipientes a presión, tuberías de proceso y soldaduras en una planta petroquímica. Se aplicaron técnicas de Phased Array, radiografía y medición de espesores para evaluar el estado de los activos críticos.",
+        "tag": "END & Integridad"
+      },
+      "pipeline": {
+        "title": "Programa de Integridad de Gasoductos",
+        "location": "Provincia de Buenos Aires, Argentina",
+        "description": "Desarrollo e implementación de un programa de integridad basado en riesgo para una red de gasoductos de transporte. Se realizaron inspecciones periódicas, mapeo de corrosión y análisis de vida remanente en tramos críticos.",
+        "tag": "Integridad de Activos"
+      },
+      "refinery": {
+        "title": "Parada de Planta en Refinería",
+        "location": "La Plata, Argentina",
+        "description": "Participación en la parada programada de una refinería, brindando servicios de inspección de soldadura, END en equipos estáticos y escaneo láser 3D para relevamiento dimensional de estructuras sometidas a mantenimiento mayor.",
+        "tag": "Parada de Planta"
+      }
+    },
+    "sectorsLabel": "Industrias",
+    "sectorsTitle": "Sectores que Servimos",
+    "sectorsSubtitle": "Brindamos soluciones técnicas especializadas a empresas líderes en los siguientes sectores.",
+    "sectors": {
+      "energy": "Energía",
+      "construction": "Construcción",
+      "pharma": "Farmacéutico",
+      "petrochem": "Petroquímico",
+      "manufacturing": "Fabricación Industrial"
+    },
+    "cta": "Ver Más Proyectos"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tenés un proyecto o necesitás asesoramiento técnico? Completá el formulario y nos comunicaremos a la brevedad.",
+    "form": {
+      "name_label": "Nombre y Apellido",
+      "name_placeholder": "Ingresá tu nombre completo",
+      "email_label": "Correo Electrónico",
+      "email_placeholder": "tucorreo@empresa.com",
+      "company_label": "Empresa",
+      "company_placeholder": "Nombre de tu empresa",
+      "phone_label": "Teléfono",
+      "phone_placeholder": "+54 11 XXXX-XXXX",
+      "message_label": "Mensaje",
+      "message_placeholder": "Describí tu consulta o requerimiento...",
+      "submit": "Enviar Mensaje",
+      "success": "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.",
+      "error": "Ocurrió un error al enviar el mensaje. Por favor, intentá nuevamente."
+    },
+    "info": {
+      "address_label": "Dirección",
+      "address_value": "Buenos Aires, Argentina",
+      "phone_label": "Teléfono",
+      "phone_value": "+54 11 XXXX-XXXX",
+      "email_label": "Correo Electrónico",
+      "email_value": "contacto@gfinspecciones.com.ar",
+      "hours_label": "Horario de Atención",
+      "hours_value": "Lunes a Viernes, 8:00 – 18:00 hs"
+    }
+  },
+  "footer": {
+    "description": "GF Inspecciones y Ensayos es una empresa argentina especializada en inspección industrial y ensayos no destructivos. Más de 10 años brindando soluciones técnicas confiables a los sectores energético, petroquímico, farmacéutico y de manufactura industrial.",
+    "quick_links_title": "Enlaces Rápidos",
+    "quick_links": {
+      "home": "Inicio",
+      "about": "Nosotros",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "services_title": "Servicios",
+    "services_links": {
+      "ndt": "Ensayos No Destructivos",
+      "welding": "Inspección de Soldadura",
+      "pressure_vessels": "Recipientes a Presión",
+      "corrosion": "Evaluación de Corrosión",
+      "integrity": "Gestión de Integridad",
+      "laser_scanning": "Escaneo Láser 3D"
+    },
+    "copyright": "© {year} GF Inspecciones y Ensayos. Todos los derechos reservados.",
+    "made_in": "Hecho con ❤️ en Buenos Aires, Argentina"
+  }
+}
