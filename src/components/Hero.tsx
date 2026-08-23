@@ -92,8 +92,8 @@ export default function Hero() {
 
         {/* Headline */}
         <h1
-          className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
-          style={{ animationDelay: '0.15s' }}
+          className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
+          style={{ animationDelay: '0.15s', color: '#E8ECF2' }}
         >
           {t('hero.headline') || (
             <>

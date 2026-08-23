@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import {
   FaSearchPlus,
   FaFire,
@@ -11,13 +12,13 @@ import {
 import { useLanguage } from '@/i18n/LanguageContext';
 import { IconType } from 'react-icons';
 
-const services: { key: string; icon: IconType }[] = [
-  { key: 'ndt', icon: FaSearchPlus },
-  { key: 'welding', icon: FaFire },
-  { key: 'pressure_vessel', icon: FaIndustry },
-  { key: 'corrosion', icon: FaFlask },
-  { key: 'asset_integrity', icon: FaClipboardCheck },
-  { key: 'laser_scanning', icon: FaCube },
+const services: { key: string; icon: IconType; href: string }[] = [
+  { key: 'ndt', icon: FaSearchPlus, href: '/servicios/ensayos-no-destructivos' },
+  { key: 'welding', icon: FaFire, href: '/servicios/inspeccion-soldadura' },
+  { key: 'pressure_vessel', icon: FaIndustry, href: '/servicios/inspeccion-recipientes-presion' },
+  { key: 'corrosion', icon: FaFlask, href: '/servicios/evaluacion-corrosion' },
+  { key: 'asset_integrity', icon: FaClipboardCheck, href: '/servicios/gestion-integridad-activos' },
+  { key: 'laser_scanning', icon: FaCube, href: '/servicios/escaneo-laser-3d' },
 ];
 
 export default function Services() {
@@ -41,13 +42,15 @@ export default function Services() {
 
         {/* Cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map(({ key, icon: Icon }) => (
-            <div
+          {services.map(({ key, icon: Icon, href }) => (
+            <Link
               key={key}
+              href={href}
               className="group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100
                          hover:shadow-xl hover:-translate-y-1
                          transition-all duration-300 ease-in-out
-                         border-t-4 border-t-transparent hover:border-t-[#D4A853]"
+                         border-t-4 border-t-transparent hover:border-t-[#D4A853]
+                         block no-underline"
             >
               {/* Icon */}
               <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-amber-50 mb-6 group-hover:bg-amber-100 transition-colors duration-300">
@@ -55,7 +58,7 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-[#1B2A4A] mb-3">
+              <h3 className="text-xl font-semibold text-[#1B2A4A] mb-3 group-hover:text-[#4A6FA5] transition-colors duration-200">
                 {t(`services.items.${key}.title`)}
               </h3>
 
@@ -63,7 +66,12 @@ export default function Services() {
               <p className="text-gray-600 leading-relaxed">
                 {t(`services.items.${key}.description`)}
               </p>
-            </div>
+
+              {/* Arrow indicator */}
+              <span className="mt-4 inline-flex items-center text-sm font-medium text-[#4A6FA5] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                Ver más →
+              </span>
+            </Link>
           ))}
         </div>
       </div>

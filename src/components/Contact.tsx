@@ -78,10 +78,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-white">
-                    {t('contact.address.label')}
+                    Ubicación
                   </p>
                   <p className="text-gray-300 text-sm mt-0.5">
-                    {t('contact.address.value')}
+                    {t('contact.address')}
                   </p>
                 </div>
               </div>
@@ -96,10 +96,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-white">
-                    {t('contact.phone.label')}
+                    Teléfono
                   </p>
                   <p className="text-gray-300 text-sm mt-0.5">
-                    {t('contact.phone.value')}
+                    {t('contact.phone')}
                   </p>
                 </div>
               </div>
@@ -114,10 +114,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold text-white">
-                    {t('contact.email.label')}
+                    Email
                   </p>
                   <p className="text-gray-300 text-sm mt-0.5">
-                    {t('contact.email.value')}
+                    {t('contact.email')}
                   </p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function Contact() {
           {/* Right column — form */}
           <div className="bg-white p-10">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              {t('contact.form.title')}
+              {t('contact.formTitle')}
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -212,7 +212,7 @@ export default function Contact() {
               {/* Status messages */}
               {success && (
                 <p className="text-green-600 text-sm font-medium">
-                  {t('contact.form.successMessage')}
+                  {t('contact.successMessage')}
                 </p>
               )}
               {error && (

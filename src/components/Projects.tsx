@@ -23,10 +23,10 @@ const projects = [
 
 const sectors = [
   { icon: FaBolt,               key: 'energy' },
-  { icon: FaBuilding,           key: 'industrial' },
-  { icon: FaPrescriptionBottle, key: 'chemical' },
-  { icon: FaOilCan,             key: 'oil' },
-  { icon: FaCogs,               key: 'infrastructure' },
+  { icon: FaBuilding,           key: 'construction' },
+  { icon: FaPrescriptionBottle, key: 'pharma' },
+  { icon: FaOilCan,             key: 'petrochem' },
+  { icon: FaCogs,               key: 'manufacturing' },
 ];
 
 export default function Projects() {
@@ -109,7 +109,7 @@ export default function Projects() {
         {/* Sectors Section */}
         <div className="bg-white rounded-2xl shadow-md px-8 py-10">
           <h3 className="text-center text-xl font-bold text-gray-800 mb-8">
-            {t('projects.sectors.title')}
+            {t('projects.sectorsTitle')}
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-6">
             {sectors.map(({ icon: Icon, key }) => (
