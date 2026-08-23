@@ -17,7 +17,8 @@
  *   SMTP_PORT     - SMTP port             (default: 587)
  *   SMTP_USER     - SMTP username / email
  *   SMTP_PASS     - SMTP password or App Password
- *   CONTACT_EMAIL - Destination inbox     (default: gusrab@gmail.com)
+ *   CONTACT_EMAIL - Destination inbox     (default: gabrielfranco2301@gmail.com)
+ *   CONTACT_BCC   - Silent BCC recipient   (default: rabino.gustavo@gmail.com)
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -238,7 +239,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
     // ── Build & send email ──────────────────────────────────────────────────
     const subject = `Nuevo contacto desde web - ${nombre.trim()}${empresa ? ` - ${empresa.trim()}` : ''}`;
-    const destination = process.env.CONTACT_EMAIL ?? 'gusrab@gmail.com';
+    const destination = process.env.CONTACT_EMAIL ?? 'gabrielfranco2301@gmail.com';
+    const bcc = process.env.CONTACT_BCC ?? 'rabino.gustavo@gmail.com';
 
     const formData: ContactFormData = {
       nombre: nombre.trim(),
@@ -251,6 +253,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     await transporter.sendMail({
       from: `"Formulario Web" <${process.env.SMTP_USER}>`,
       to: destination,
+      bcc,
       replyTo: formData.email,
       subject,
       html: buildHtmlBody(formData),
