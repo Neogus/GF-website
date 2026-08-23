@@ -1,6 +1,5 @@
 'use client';
 
-import { motion, type Variants } from 'framer-motion';
 import {
   FaSearchPlus,
   FaFire,
@@ -20,27 +19,6 @@ const services: { key: string; icon: IconType }[] = [
   { key: 'asset_integrity', icon: FaClipboardCheck },
   { key: 'laser_scanning', icon: FaCube },
 ];
-
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-};
 
 export default function Services() {
   const { t } = useLanguage();
@@ -62,17 +40,10 @@ export default function Services() {
         </div>
 
         {/* Cards grid */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map(({ key, icon: Icon }) => (
-            <motion.div
+            <div
               key={key}
-              variants={cardVariants}
               className="group relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100
                          hover:shadow-xl hover:-translate-y-1
                          transition-all duration-300 ease-in-out
@@ -92,9 +63,9 @@ export default function Services() {
               <p className="text-gray-600 leading-relaxed">
                 {t(`services.items.${key}.description`)}
               </p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

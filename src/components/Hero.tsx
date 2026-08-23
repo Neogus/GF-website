@@ -1,23 +1,11 @@
 'use client';
 
-import { motion, type Easing } from 'framer-motion';
 import { useLanguage } from '@/i18n/LanguageContext';
 
-const easeOut: Easing = [0.25, 0.46, 0.45, 0.94];
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (delay: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: easeOut, delay },
-  }),
-};
-
 const stats = [
-  { value: '10+', labelKey: 'hero.stats.years', fallback: 'Años' },
-  { value: '500+', labelKey: 'hero.stats.projects', fallback: 'Proyectos' },
-  { value: '50+', labelKey: 'hero.stats.clients', fallback: 'Clientes' },
+  { value: '10+',  labelKey: 'hero.stats.years',      fallback: 'Años' },
+  { value: '500+', labelKey: 'hero.stats.projects',   fallback: 'Proyectos' },
+  { value: '50+',  labelKey: 'hero.stats.clients',    fallback: 'Clientes' },
   { value: '100%', labelKey: 'hero.stats.commitment', fallback: 'Compromiso' },
 ];
 
@@ -80,13 +68,11 @@ export default function Hero() {
 
       {/* ── Main content ── */}
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-24 text-center">
+
         {/* Eyebrow label */}
-        <motion.div
-          custom={0}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="mb-6 inline-flex items-center gap-2"
+        <div
+          className="mb-6 inline-flex items-center gap-2 opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
+          style={{ animationDelay: '0s' }}
         >
           <span
             className="block h-px w-10"
@@ -102,15 +88,12 @@ export default function Hero() {
             className="block h-px w-10"
             style={{ background: '#D4A017' }}
           />
-        </motion.div>
+        </div>
 
         {/* Headline */}
-        <motion.h1
-          custom={0.15}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+        <h1
+          className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
+          style={{ animationDelay: '0.15s' }}
         >
           {t('hero.headline') || (
             <>
@@ -119,27 +102,21 @@ export default function Hero() {
               que Garantizan Calidad
             </>
           )}
-        </motion.h1>
+        </h1>
 
         {/* Subtitle */}
-        <motion.p
-          custom={0.3}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="mt-6 max-w-2xl text-base leading-relaxed text-blue-100/80 sm:text-lg"
+        <p
+          className="mt-6 max-w-2xl text-base leading-relaxed text-blue-100/80 sm:text-lg opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
+          style={{ animationDelay: '0.3s' }}
         >
           {t('hero.subtitle') ||
             'Más de una década brindando servicios especializados de inspección, ensayos no destructivos y control de calidad para la industria.'}
-        </motion.p>
+        </p>
 
         {/* CTA buttons */}
-        <motion.div
-          custom={0.45}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+        <div
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
+          style={{ animationDelay: '0.45s' }}
         >
           <a
             href="#servicios"
@@ -165,36 +142,26 @@ export default function Hero() {
           >
             {t('hero.cta.contact') || 'Contáctenos'}
           </a>
-        </motion.div>
+        </div>
 
         {/* Scroll cue */}
-        <motion.div
-          custom={0.65}
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          className="mt-14 flex flex-col items-center gap-2"
+        <div
+          className="mt-14 flex flex-col items-center gap-2 opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
+          style={{ animationDelay: '0.65s' }}
         >
           <span className="text-xs uppercase tracking-widest text-white/40">
             {t('hero.scroll') || 'Desplázate'}
           </span>
           <div className="flex h-8 w-5 items-start justify-center rounded-full border border-white/30 p-1">
-            <motion.div
-              className="h-2 w-1 rounded-full bg-white/60"
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.4, repeat: Infinity, ease: [0.45, 0.05, 0.55, 0.95] }}
-            />
+            <div className="h-2 w-1 rounded-full bg-white/60 animate-bounce" />
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* ── Stats bar ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.8, ease: easeOut }}
-        className="relative z-10 w-full"
-        style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+      <div
+        className="relative z-10 w-full opacity-0 animate-[fade-up_0.7s_ease-out_forwards]"
+        style={{ borderTop: '1px solid rgba(255,255,255,0.08)', animationDelay: '0.8s' }}
       >
         <div
           className="grid grid-cols-2 sm:grid-cols-4"
@@ -219,7 +186,7 @@ export default function Hero() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

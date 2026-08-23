@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import { useLanguage } from '@/i18n/LanguageContext';
 
@@ -11,20 +12,20 @@ export default function Footer() {
   const copyright = t('footer.copyright').replace('{year}', String(currentYear));
 
   const quickLinks = [
-    { labelKey: 'footer.quick_links.home', href: '#inicio' },
-    { labelKey: 'footer.quick_links.about', href: '#nosotros' },
-    { labelKey: 'footer.quick_links.services', href: '#servicios' },
-    { labelKey: 'footer.quick_links.projects', href: '#proyectos' },
-    { labelKey: 'footer.quick_links.contact', href: '#contacto' },
+    { label: t('nav.inicio'), href: '#inicio' },
+    { label: t('nav.nosotros'), href: '#nosotros' },
+    { label: t('nav.servicios'), href: '#servicios' },
+    { label: t('nav.proyectos'), href: '#proyectos' },
+    { label: t('nav.contacto'), href: '#contacto' },
   ];
 
   const serviceLinks = [
-    { labelKey: 'footer.services_links.ndt' },
-    { labelKey: 'footer.services_links.welding' },
-    { labelKey: 'footer.services_links.pressure_vessels' },
-    { labelKey: 'footer.services_links.corrosion' },
-    { labelKey: 'footer.services_links.integrity' },
-    { labelKey: 'footer.services_links.laser_scanning' },
+    { label: t('services.items.ndt.title'), href: '/servicios/ensayos-no-destructivos' },
+    { label: t('services.items.welding.title'), href: '/servicios/inspeccion-soldadura' },
+    { label: t('services.items.pressure_vessel.title'), href: '/servicios/inspeccion-recipientes-presion' },
+    { label: t('services.items.corrosion.title'), href: '/servicios/evaluacion-corrosion' },
+    { label: t('services.items.asset_integrity.title'), href: '/servicios/gestion-integridad-activos' },
+    { label: t('services.items.laser_scanning.title'), href: '/servicios/escaneo-laser-3d' },
   ];
 
   return (
@@ -48,27 +49,22 @@ export default function Footer() {
                 alt="GF Inspecciones y Ensayos"
                 width={160}
                 height={56}
-                className="object-contain brightness-0 invert"
-                priority={false}
+                className="brightness-0 invert opacity-90"
               />
             </div>
-
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed mb-5">
               {t('footer.description')}
             </p>
-
-            {/* Social */}
-            <div className="mt-5 flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/company/gf-inspecciones"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-[#0077B5] transition-colors duration-200"
-              >
-                <FaLinkedin className="text-white text-base" />
-              </a>
-            </div>
+            <a
+              href="https://www.linkedin.com/company/gf-inspecciones"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-200"
+            >
+              <FaLinkedin className="text-blue-400" />
+              LinkedIn
+            </a>
           </div>
 
           {/* ── Column 2: Quick Links ── */}
@@ -77,33 +73,33 @@ export default function Footer() {
               {t('footer.quick_links_title')}
             </h3>
             <ul className="space-y-2.5">
-              {quickLinks.map(({ labelKey, href }) => (
-                <li key={labelKey}>
+              {quickLinks.map((link) => (
+                <li key={link.href}>
                   <a
-                    href={href}
+                    href={link.href}
                     className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
                   >
-                    {t(labelKey)}
+                    {link.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* ── Column 3: Services ── */}
+          {/* ── Column 3: Services (links to individual pages) ── */}
           <div>
             <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-b border-white/10 pb-2">
               {t('footer.services_title')}
             </h3>
             <ul className="space-y-2.5">
-              {serviceLinks.map(({ labelKey }) => (
-                <li key={labelKey}>
-                  <a
-                    href="#servicios"
+              {serviceLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
                     className="text-sm text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-200"
                   >
-                    {t(labelKey)}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -112,7 +108,7 @@ export default function Footer() {
           {/* ── Column 4: Contact Info ── */}
           <div>
             <h3 className="text-white font-semibold text-xs uppercase tracking-widest mb-4 border-b border-white/10 pb-2">
-              {t('nav.contact')}
+              {t('nav.contacto')}
             </h3>
             <ul className="space-y-3.5">
               <li className="flex items-start gap-3">
@@ -124,19 +120,19 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <FaPhone className="text-blue-400 flex-shrink-0 text-sm" />
                 <a
-                  href="tel:+541100000000"
+                  href="tel:+5491161528650"
                   className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
                 >
-                  +54 11 XXXX-XXXX
+                  +54 9 11 6152-8650
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-400 flex-shrink-0 text-sm" />
                 <a
-                  href="mailto:contacto@gfinspecciones.com.ar"
+                  href="mailto:gabrielfranco2031@gmail.com"
                   className="text-sm text-gray-400 hover:text-white transition-colors duration-200 break-all"
                 >
-                  contacto@gfinspecciones.com.ar
+                  gabrielfranco2031@gmail.com
                 </a>
               </li>
             </ul>
@@ -145,14 +141,9 @@ export default function Footer() {
 
         {/* ── Bottom bar ── */}
         <div className="mt-12 pt-6 border-t border-white/10">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-            <p className="text-xs text-gray-500">
-              {copyright}
-            </p>
-            <p className="text-xs text-gray-500">
-              {t('footer.made_in')}
-            </p>
-          </div>
+          <p className="text-xs text-gray-500 text-center">
+            {copyright}
+          </p>
         </div>
 
       </div>

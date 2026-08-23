@@ -7,11 +7,11 @@ import { MdLanguage } from 'react-icons/md';
 import { useLanguage } from '@/i18n/LanguageContext';
 
 const NAV_LINKS = [
-  { labelKey: 'nav.inicio',    href: '#inicio'    },
-  { labelKey: 'nav.nosotros',  href: '#nosotros'  },
-  { labelKey: 'nav.servicios', href: '#servicios' },
-  { labelKey: 'nav.proyectos', href: '#proyectos' },
-  { labelKey: 'nav.contacto',  href: '#contacto'  },
+  { labelKey: 'nav.inicio',    href: '/#inicio'    },
+  { labelKey: 'nav.nosotros',  href: '/#nosotros'  },
+  { labelKey: 'nav.servicios', href: '/#servicios' },
+  { labelKey: 'nav.proyectos', href: '/#proyectos' },
+  { labelKey: 'nav.contacto',  href: '/#contacto'  },
 ];
 
 export default function Navbar() {
@@ -39,12 +39,16 @@ export default function Navbar() {
     e.preventDefault();
     setActiveLink(href);
     setMenuOpen(false);
-    const target = document.querySelector(href);
+    if (window.location.pathname !== '/') {
+      window.location.href = href;
+      return;
+    }
+    const hash = href.startsWith('/') ? href.slice(1) : href;
+    const target = document.querySelector(hash);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
   const toggleLanguage = () => setLanguage(language === 'es' ? 'en' : 'es');
 
   /* ── styles ──────────────────────────────────────────────────────── */
@@ -70,8 +74,8 @@ export default function Navbar() {
 
           {/* ── Logo ──────────────────────────────────────────────────── */}
           <a
-            href="#inicio"
-            onClick={(e) => handleNavClick(e, '#inicio')}
+            href="/#inicio"
+            onClick={(e) => handleNavClick(e, '/#inicio')}
             className="flex-shrink-0 flex items-center"
             aria-label="GF Inspecciones y Ensayos – Inicio"
           >

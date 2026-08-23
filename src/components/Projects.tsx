@@ -1,204 +1,132 @@
 'use client';
 
-import { motion, type Variants } from 'framer-motion';
-import { FaBolt, FaBuilding, FaPrescriptionBottle, FaOilCan, FaCogs } from 'react-icons/fa';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { FaBolt, FaBuilding, FaPrescriptionBottle, FaOilCan, FaCogs } from 'react-icons/fa';
 
-const projectCards = [
+const projects = [
   {
-    gradient: 'from-orange-600 via-amber-500 to-yellow-400',
-    accent: 'bg-orange-100 text-orange-700',
-    titleKey: 'projects.items.petrochemical.title',
-    locationKey: 'projects.items.petrochemical.location',
-    descKey: 'projects.items.petrochemical.description',
-    tagKey: 'projects.items.petrochemical.tag',
-    extraTags: ['NDT', 'PAUT', 'RT'],
+    key: 'petrochemical',
+    gradient: 'from-orange-500 via-orange-600 to-amber-700',
+    iconBg: 'bg-orange-400/30',
   },
   {
-    gradient: 'from-slate-700 via-slate-600 to-slate-500',
-    accent: 'bg-slate-100 text-slate-700',
-    titleKey: 'projects.items.pipeline.title',
-    locationKey: 'projects.items.pipeline.location',
-    descKey: 'projects.items.pipeline.description',
-    tagKey: 'projects.items.pipeline.tag',
-    extraTags: ['RBI', 'FFS'],
+    key: 'pipeline',
+    gradient: 'from-slate-500 via-slate-600 to-slate-800',
+    iconBg: 'bg-slate-400/30',
   },
   {
-    gradient: 'from-blue-700 via-blue-500 to-cyan-400',
-    accent: 'bg-blue-100 text-blue-700',
-    titleKey: 'projects.items.refinery.title',
-    locationKey: 'projects.items.refinery.location',
-    descKey: 'projects.items.refinery.description',
-    tagKey: 'projects.items.refinery.tag',
-    extraTags: ['API', 'ASME'],
+    key: 'refinery',
+    gradient: 'from-blue-500 via-blue-600 to-blue-900',
+    iconBg: 'bg-blue-400/30',
   },
 ];
 
-const industries = [
-  { icon: FaBolt, labelKey: 'projects.sectors.energy', color: 'text-amber-500', bg: 'bg-amber-50', border: 'border-amber-200' },
-  { icon: FaBuilding, labelKey: 'projects.sectors.construction', color: 'text-slate-600', bg: 'bg-slate-50', border: 'border-slate-200' },
-  { icon: FaPrescriptionBottle, labelKey: 'projects.sectors.pharma', color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' },
-  { icon: FaOilCan, labelKey: 'projects.sectors.petrochem', color: 'text-orange-600', bg: 'bg-orange-50', border: 'border-orange-200' },
-  { icon: FaCogs, labelKey: 'projects.sectors.manufacturing', color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200' },
+const sectors = [
+  { icon: FaBolt,               key: 'energy' },
+  { icon: FaBuilding,           key: 'industrial' },
+  { icon: FaPrescriptionBottle, key: 'chemical' },
+  { icon: FaOilCan,             key: 'oil' },
+  { icon: FaCogs,               key: 'infrastructure' },
 ];
-
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] },
-  },
-};
-
-const industryVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.85 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] },
-  },
-};
 
 export default function Projects() {
   const { t } = useLanguage();
 
   return (
-    <section
-      id="proyectos"
-      className="relative bg-white py-24 overflow-hidden"
-    >
-      {/* Subtle background accent blobs */}
-      <div className="pointer-events-none absolute -top-32 -right-32 w-96 h-96 rounded-full bg-orange-50 opacity-60 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-blue-50 opacity-50 blur-3xl" />
+    <section id="proyectos" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* ── Section header ── */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="inline-block px-4 py-1 text-sm font-semibold tracking-widest uppercase rounded-full bg-orange-100 text-orange-600 mb-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 mb-4 text-sm font-semibold tracking-widest uppercase rounded-full bg-orange-100 text-orange-600">
             {t('projects.label')}
           </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             {t('projects.title')}
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-gray-500">
             {t('projects.subtitle')}
           </p>
-        </motion.div>
+        </div>
 
-        {/* ── Project cards grid ── */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {projectCards.map((card, idx) => (
-            <motion.div
-              key={idx}
-              variants={cardVariants}
-              className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+        {/* Project Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {projects.map((project) => (
+            <div
+              key={project.key}
+              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
             >
-              {/* Image placeholder with gradient */}
-              <div className={`h-48 bg-gradient-to-br ${card.gradient} relative flex items-end p-5`}>
-                <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==')]" />
-                <span className={`relative z-10 inline-block px-3 py-1 text-xs font-bold rounded-full bg-white/20 text-white backdrop-blur-sm border border-white/30`}>
-                  {t(card.tagKey)}
-                </span>
+              {/* Gradient image placeholder */}
+              <div className={`relative h-52 bg-gradient-to-br ${project.gradient}`}>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className={`w-16 h-16 rounded-full ${project.iconBg} flex items-center justify-center`}>
+                    <FaOilCan className="w-8 h-8 text-white/80" />
+                  </div>
+                </div>
+                {/* Location badge */}
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-black/40 text-white text-xs font-medium backdrop-blur-sm">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    {t(`projects.items.${project.key}.location`)}
+                  </span>
+                </div>
               </div>
 
               {/* Card body */}
               <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <svg className="w-4 h-4 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span className="text-sm text-gray-400 font-medium">{t(card.locationKey)}</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors duration-200">
-                  {t(card.titleKey)}
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-200">
+                  {t(`projects.items.${project.key}.title`)}
                 </h3>
-
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">
-                  {t(card.descKey)}
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  {t(`projects.items.${project.key}.description`)}
                 </p>
 
-                {/* Technique badges */}
+                {/* Tag badges */}
                 <div className="flex flex-wrap gap-2">
-                  {card.extraTags.map((tag) => (
-                    <span
-                      key={tag}
-                      className={`px-3 py-1 text-xs font-semibold rounded-full ${card.accent}`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {(t(`projects.items.${project.key}.tags`) as unknown as string[])?.map
+                    ? (t(`projects.items.${project.key}.tags`) as unknown as string[]).map((tag: string) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-1 text-xs font-medium rounded-full bg-orange-50 text-orange-700 border border-orange-100"
+                        >
+                          {tag}
+                        </span>
+                      ))
+                    : (
+                        <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-orange-50 text-orange-700 border border-orange-100">
+                          {t(`projects.items.${project.key}.tag`)}
+                        </span>
+                      )
+                  }
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* ── Sectores que Servimos ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10"
-        >
-          <span className="inline-block px-4 py-1 text-sm font-semibold tracking-widest uppercase rounded-full bg-blue-100 text-blue-600 mb-4">
-            {t('projects.sectorsLabel')}
-          </span>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
-            {t('projects.sectorsTitle') || 'Sectores que Servimos'}
+        {/* Sectors Section */}
+        <div className="bg-white rounded-2xl shadow-md px-8 py-10">
+          <h3 className="text-center text-xl font-bold text-gray-800 mb-8">
+            {t('projects.sectors.title')}
           </h3>
-          <p className="max-w-xl mx-auto text-gray-500 text-base">
-            {t('projects.sectorsSubtitle')}
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {industries.map(({ icon: Icon, labelKey, color, bg, border }, idx) => (
-            <motion.div
-              key={idx}
-              variants={industryVariants}
-              className={`flex flex-col items-center justify-center gap-4 p-6 rounded-2xl border ${bg} ${border} shadow-sm hover:shadow-md transition-shadow duration-300 cursor-default`}
-            >
-              <div className={`w-14 h-14 rounded-full flex items-center justify-center ${bg} border ${border} shadow-inner`}>
-                <Icon className={`w-7 h-7 ${color}`} />
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-6">
+            {sectors.map(({ icon: Icon, key }) => (
+              <div
+                key={key}
+                className="flex flex-col items-center gap-3 group cursor-default"
+              >
+                <div className="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center group-hover:bg-orange-100 transition-colors duration-200 shadow-sm">
+                  <Icon className="w-6 h-6 text-orange-500" />
+                </div>
+                <span className="text-sm font-medium text-gray-600 text-center leading-tight">
+                  {t(`projects.sectors.${key}`)}
+                </span>
               </div>
-              <span className="text-sm font-semibold text-gray-700 text-center leading-tight">
-                {t(labelKey)}
-              </span>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+        </div>
 
       </div>
     </section>

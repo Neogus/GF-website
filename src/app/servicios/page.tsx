@@ -95,42 +95,72 @@ export default function ServiciosPage() {
       <Navbar />
 
       <main>
-        {/* Hero Banner */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-24 px-4 overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-0 w-72 h-72 bg-white rounded-full translate-x-1/3 translate-y-1/3" />
-          </div>
-          <div className="relative max-w-5xl mx-auto text-center">
-            <p className="text-blue-300 uppercase tracking-widest text-sm font-semibold mb-4">
-              GF Inspecciones y Ensayos
-            </p>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        {/* ── Hero Banner ── */}
+        <section
+          className="relative flex items-center justify-center"
+          style={{ minHeight: '40vh', background: '#1B2A4A' }}
+        >
+          {/* Subtle grid overlay */}
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage:
+                'linear-gradient(#4A6FA5 1px, transparent 1px), linear-gradient(90deg, #4A6FA5 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+
+          <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 text-center">
+            {/* Title */}
+            <h1
+              className="text-4xl md:text-5xl font-bold tracking-tight mb-4"
+              style={{ color: '#FFFFFF' }}
+            >
               Nuestros Servicios
             </h1>
-            <p className="text-blue-100 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+
+            {/* Amber divider */}
+            <div
+              className="mx-auto mb-5 rounded-full"
+              style={{ width: '64px', height: '4px', background: '#D4A853' }}
+            />
+
+            {/* Subtitle */}
+            <p
+              className="text-lg md:text-xl max-w-2xl mx-auto"
+              style={{ color: '#B8C9E0' }}
+            >
               Soluciones de inspección industrial de alta calidad respaldadas por
               tecnología de vanguardia y personal certificado internacionalmente.
             </p>
           </div>
         </section>
 
-        {/* Breadcrumb */}
+        {/* ── Breadcrumb ── */}
         <nav
+          className="border-b"
+          style={{ background: '#F0F4FA', borderColor: '#D1DCF0' }}
           aria-label="Breadcrumb"
-          className="bg-gray-50 border-b border-gray-200 px-4 py-3"
         >
-          <div className="max-w-7xl mx-auto">
-            <ol className="flex items-center gap-2 text-sm text-gray-500">
-              <li>
-                <Link href="/" className="hover:text-blue-700 transition-colors">
-                  Inicio
-                </Link>
-              </li>
-              <li aria-hidden="true">›</li>
-              <li className="text-gray-800 font-medium">Servicios</li>
-            </ol>
-          </div>
+          <ol className="max-w-6xl mx-auto px-6 py-3 flex items-center gap-2 text-sm">
+            <li>
+              <Link
+                href="/"
+                className="transition-colors hover:underline"
+                style={{ color: '#4A6FA5' }}
+              >
+                Inicio
+              </Link>
+            </li>
+            <li style={{ color: '#9AAABF' }}>›</li>
+            <li
+              className="font-medium"
+              style={{ color: '#1B2A4A' }}
+              aria-current="page"
+            >
+              Servicios
+            </li>
+          </ol>
         </nav>
 
         {/* Services Grid */}

@@ -1,44 +1,49 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About Us",
-    "services": "Services",
-    "projects": "Projects",
-    "contact": "Contact",
-    "language": "ES"
+    "inicio": "Home",
+    "nosotros": "About Us",
+    "servicios": "Services",
+    "proyectos": "Projects",
+    "contacto": "Contact",
+    "language": "ES",
+    "contact": "Contact"
   },
   "hero": {
+    "eyebrow": "Professional Industrial Inspection",
     "headline": "Leaders in Industrial Inspection & NDT in Argentina",
     "subtitle": "GF Inspecciones y Ensayos provides cutting-edge non-destructive testing and industrial inspection services, ensuring the integrity, safety, and reliability of your critical assets.",
-    "cta_primary": "Explore Our Services",
-    "cta_secondary": "Contact Us"
+    "cta": {
+      "services": "Our Services",
+      "contact": "Contact Us"
+    },
+    "scroll": "Scroll Down",
+    "stats": {
+      "years": "Years",
+      "projects": "Projects",
+      "clients": "Clients",
+      "commitment": "Commitment"
+    }
   },
   "about": {
+    "label": "About Us",
     "title": "About GF Inspecciones y Ensayos",
-    "description": "With over 10 years of experience in the industrial inspection sector, GF Inspecciones y Ensayos has established itself as a trusted partner for companies operating in the most demanding industries across Argentina and the region. Our team of certified professionals holds internationally recognized qualifications and is deeply committed to delivering results that meet the highest standards of quality and safety. We combine technical expertise with a client-focused approach to provide solutions that protect both people and assets.",
-    "experience_label": "Years of Experience",
-    "experience_value": "10+",
-    "projects_label": "Completed Projects",
-    "projects_value": "500+",
-    "clients_label": "Satisfied Clients",
-    "clients_value": "80+",
-    "values_title": "Our Core Values",
+    "description": "With over 10 years of experience in the industrial inspection sector, GF Inspecciones y Ensayos has established itself as a trusted partner for companies operating in the most demanding industries across Argentina. Our team of certified professionals holds internationally recognized qualifications and is committed to delivering results that meet the highest standards of quality and safety.",
     "values": {
-      "integrity": {
+      "0": {
         "title": "Integrity",
         "description": "We conduct every inspection with honesty, transparency, and strict adherence to technical and ethical standards."
       },
-      "precision": {
+      "1": {
         "title": "Precision",
-        "description": "Accurate, reliable results are at the heart of what we do — because in our field, details make all the difference."
+        "description": "Accurate, reliable results are at the heart of what we do — because details make all the difference."
       },
-      "innovation": {
+      "2": {
         "title": "Innovation",
         "description": "We continuously adopt the latest technologies and methodologies to deliver superior inspection outcomes."
       },
-      "safety": {
+      "3": {
         "title": "Safety",
-        "description": "The safety of our team, our clients, and the public is non-negotiable and guides every decision we make."
+        "description": "The safety of our team, our clients, and the public is non-negotiable and guides every decision."
       }
     }
   },
@@ -48,51 +53,51 @@
     "items": {
       "ndt": {
         "title": "Non-Destructive Testing (NDT)",
-        "description": "We apply advanced NDT techniques to detect and characterize defects without affecting the integrity of the tested component. Our capabilities include phased array ultrasonics (PAUT), industrial radiography (RT), eddy current testing (ET), and dye penetrant inspection (PT), among others."
+        "description": "Phased Array Ultrasonics (PAUT), industrial radiography (RT), eddy current testing (ET), and dye penetrant inspection (PT). We evaluate material integrity without affecting functionality."
       },
       "welding": {
         "title": "Welding Inspection",
-        "description": "Our certified welding inspectors ensure full compliance with applicable codes and standards. Services include weld certification, procedure and welder qualification, and development or review of Welding Procedure Specifications (WPS) and Procedure Qualification Records (PQR)."
+        "description": "Weld certification, procedure qualification (WPS/PQR), welder qualification per AWS, ASME and ISO standards, and quality control during fabrication and assembly."
       },
       "pressure_vessel": {
         "title": "Pressure Vessel Inspection",
-        "description": "We perform thorough in-service and pre-commissioning inspections of pressure vessels, piping, and process systems in accordance with ASME codes, national regulations, and client specifications to ensure safe and reliable operation."
+        "description": "Inspection of pressure vessels, piping and process systems per ASME, API codes and Argentine regulations. Technical reports for certification and recertification."
       },
       "corrosion": {
         "title": "Corrosion Assessment",
-        "description": "Our corrosion specialists assess the condition of industrial assets through wall thickness measurement, corrosion mapping, and degradation analysis. We provide remaining life estimates and actionable recommendations to support maintenance planning and asset longevity."
+        "description": "Ultrasonic wall thickness measurement, corrosion mapping and degradation analysis. Remaining life estimation and mitigation strategies."
       },
       "asset_integrity": {
         "title": "Asset Integrity Management",
-        "description": "We support operators in developing and implementing risk-based inspection (RBI) plans, providing technical consulting, and establishing quality assurance programs that maximize asset availability while minimizing risk and operational costs."
+        "description": "Risk-Based Inspection (RBI) plans, predictive maintenance and technical consulting. Quality assurance and regulatory compliance."
       },
       "laser_scanning": {
         "title": "3D Laser Scanning",
-        "description": "Using high-precision 3D laser scanning technology, we capture accurate as-built data for industrial facilities and components. Applications include 3D modeling, dimensional analysis, deformation monitoring, and reverse engineering for maintenance and project planning."
+        "description": "High-precision dimensional surveys, BIM modeling, deformation analysis and reverse engineering for industrial plants."
       }
     }
   },
   "projects": {
     "label": "Projects",
     "title": "Featured Projects",
-    "subtitle": "A selection of completed projects that reflect our technical expertise and commitment to excellence across diverse industries.",
+    "subtitle": "A selection of projects where we applied our expertise to ensure the integrity and safety of industrial installations.",
     "items": {
       "petrochemical": {
         "title": "Petrochemical Plant Inspection",
-        "location": "Buenos Aires Province, Argentina",
-        "description": "Comprehensive NDT and integrity inspection campaign across multiple process units at a major petrochemical complex, including PAUT, radiography, and corrosion mapping of critical piping and pressure vessels.",
+        "location": "Buenos Aires, Argentina",
+        "description": "Comprehensive inspection program for pressure vessels, process piping and welds using Phased Array, radiography and thickness measurement.",
         "tag": "NDT & Integrity"
       },
       "pipeline": {
         "title": "Pipeline Integrity Program",
-        "location": "Patagonia, Argentina",
-        "description": "Design and execution of a risk-based pipeline integrity management program for an oil & gas transmission operator, covering inline inspection data analysis, corrosion assessment, and fitness-for-service evaluations.",
+        "location": "Buenos Aires Province",
+        "description": "Risk-based integrity program for gas transmission pipelines. Periodic inspections, corrosion mapping and remaining life analysis.",
         "tag": "Asset Integrity"
       },
       "refinery": {
-        "title": "Refinery Turnaround Inspection",
-        "location": "Buenos Aires, Argentina",
-        "description": "Full-scope inspection services during a planned shutdown at a regional refinery, encompassing pressure vessel internal inspections, welding quality control, and post-repair NDT verification in compliance with API and ASME standards.",
+        "title": "Refinery Turnaround",
+        "location": "La Plata, Argentina",
+        "description": "Welding inspection, NDT on static equipment and 3D laser scanning for dimensional survey during planned shutdown.",
         "tag": "Turnaround Services"
       }
     },
@@ -105,54 +110,36 @@
       "pharma": "Pharmaceutical",
       "petrochem": "Petrochemical",
       "manufacturing": "Industrial Manufacturing"
-    },
-    "cta": "View More Projects"
+    }
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "Have a project in mind or need technical advice? Our team is ready to assist. Fill out the form and we will get back to you promptly.",
-    "form": {
-      "name": "Full Name",
-      "name_placeholder": "John Smith",
-      "email": "Email Address",
-      "email_placeholder": "john.smith@company.com",
-      "company": "Company",
-      "company_placeholder": "Your Company Name",
-      "phone": "Phone Number",
-      "phone_placeholder": "+1 (555) 000-0000",
-      "message": "Message",
-      "message_placeholder": "Tell us about your project or inquiry...",
-      "submit": "Send Message",
-      "success": "Thank you! Your message has been sent. We will be in touch shortly.",
-      "error": "Something went wrong. Please try again or contact us directly."
-    },
-    "address_label": "Address",
+    "subtitle": "Have a project in mind or need technical advice? Fill out the form and we will get back to you promptly.",
     "address": "Buenos Aires, Argentina",
-    "phone_label": "Phone",
-    "phone": "+54 11 0000-0000",
-    "email_label": "Email",
-    "email": "info@gfinspecciones.com.ar"
+    "phone": "+54 9 11 6152-8650",
+    "email": "gabrielfranco2031@gmail.com",
+    "formTitle": "Send us your inquiry",
+    "successMessage": "Message sent successfully! We will be in touch shortly.",
+    "errorMessage": "Something went wrong. Please try again.",
+    "form": {
+      "nombre": "Full Name",
+      "nombrePlaceholder": "Your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "you@company.com",
+      "empresa": "Company",
+      "empresaPlaceholder": "Your company name",
+      "telefono": "Phone",
+      "telefonoPlaceholder": "+54 9 11 6152-8650",
+      "mensaje": "Message",
+      "mensajePlaceholder": "Tell us about your project or inquiry...",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    }
   },
   "footer": {
     "description": "GF Inspecciones y Ensayos is a leading provider of industrial inspection and non-destructive testing services in Argentina, committed to quality, safety, and technical excellence.",
     "quick_links_title": "Quick Links",
-    "quick_links": {
-      "home": "Home",
-      "about": "About Us",
-      "services": "Services",
-      "projects": "Projects",
-      "contact": "Contact"
-    },
     "services_title": "Services",
-    "services_links": {
-      "ndt": "Non-Destructive Testing",
-      "welding": "Welding Inspection",
-      "pressure_vessels": "Pressure Vessels",
-      "corrosion": "Corrosion Assessment",
-      "integrity": "Asset Integrity",
-      "laser_scanning": "3D Laser Scanning"
-    },
-    "copyright": "© {year} GF Inspecciones y Ensayos. All rights reserved.",
-    "made_in": "Made with ❤️ in Buenos Aires, Argentina"
+    "copyright": "© {year} GF Inspecciones y Ensayos. All rights reserved."
   }
 }

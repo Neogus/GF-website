@@ -239,19 +239,12 @@ export default function ServicePage({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contacto"
+                href="/#contacto"
                 className="inline-block px-8 py-3 rounded-md font-semibold text-sm transition-opacity hover:opacity-90"
                 style={{ background: '#D4A853', color: '#1B2A4A' }}
               >
                 Solicitar Cotización
               </Link>
-              <a
-                href="#contacto"
-                className="inline-block px-8 py-3 rounded-md font-semibold text-sm border transition-colors hover:bg-white/10"
-                style={{ borderColor: '#4A6FA5', color: '#FFFFFF' }}
-              >
-                Ver Formulario de Contacto
-              </a>
             </div>
           </section>
 
@@ -317,7 +310,7 @@ export default function ServicePage({
                 ¿Necesita un servicio personalizado o una solución integral?
               </p>
               <Link
-                href="/contacto"
+                href="/#contacto"
                 className="block w-full text-center px-4 py-2.5 rounded-md text-sm font-semibold transition-opacity hover:opacity-90"
                 style={{ background: '#1B2A4A', color: '#FFFFFF' }}
               >
